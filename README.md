@@ -1,6 +1,6 @@
 # Guía para la gestión del sitio web de Némesis
 
-El presente repositorio contiene los archivos necesarios para modificar y actualizar la [página web de la Mutual de Los Huemules](https://nicolastobarj.github.io/docs/index.html). La estructura es la siguiente:
+El presente repositorio contiene los archivos necesarios para modificar y actualizar la [página web de la Mutual de Los Huemules](https://nicolastobarj.github.io/huemules/). La estructura es la siguiente:
 
 En la capa inicial se encuentran los documentos asociados al inicio de la página, es decir, las plantillas .qmd de cada sección dispuesta en la barra de navegación superior. Además, se encuentra el yml que renderiza el archivo html que luego se publica en la página, el archivo css que le da forma a la página y carpetas de trabajo. Cabe mencionar que el archivo _publish.yml está hecho para subir la página a la app netlify, donde se encuentra alojado el link del sitio web.
 
@@ -16,4 +16,4 @@ Asimismo, en la capa inicial se alojan archivos de soporte de la página como `4
 
 Los archivos *.qmd* que están en las carpetas `product` están codificados de tal manera de favorecer el orden y la posibilidad de encontrar estos archivos. 
 
-[# LINK PAGINA WEB](https://nicolastobarj.github.io/docs/index.html)
+[# LINK PAGINA WEB](https://nicolastobarj.github.io/huemules/)
