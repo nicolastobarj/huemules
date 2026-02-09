@@ -1,0 +1,50 @@
+---
+pagetitle: "Mutual Los Huemules"
+lang: es
+toc: false
+page-layout: custom
+css: home.css
+
+listing:
+  - id: product
+    contents: product
+    type: grid
+    sort: 
+      - "date desc"
+      - "title"
+    fields: [image, title, subtitle, author, date, reading-time]
+    categories: false         
+    sort-ui: false           
+    filter-ui: false         
+    page-size: 9             
+    image-height: 250px      
+    image-placeholder: "images/huemul_banner.png"
+    exclude:
+      category: "no_visualize"
+---
+
+```{=html}
+<div class="hero-banner">
+  <div class="hero-content">
+    <h1>¿Algo grande está naciendo?</h1>
+    <h3>Cartas a la juventud chilena para levantarse a construir algo mejor</h3>
+    
+    <div class="hero-buttons">
+      <a href="#novedades" class="btn btn-nemesis-primary btn-lg" role="button">Ver novedades</a>
+      <a href="la_voz_2030.qmd" class="btn btn-nemesis-outline btn-lg" role="button">Enviar manuscrito</a>
+    </div>
+  </div>
+</div>
+```
+
+::: {.content-container}
+
+<div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
+
+## Novedades
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
+
+::: {#product}
+:::
+
+

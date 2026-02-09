@@ -1,0 +1,8 @@
+.about-image-container::after {
+  content: "Foto por Francisco Farias";
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 10px;
+}

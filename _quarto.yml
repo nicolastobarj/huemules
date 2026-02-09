@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: es
+
+website:
+  title: "Mutual Los Huemules"
+  description: "Hacia una vía chilena al metamodernismo"
+  image: "images/logo_huemul.png"
+  favicon: "images/logo_huemul.png"
+  open-graph: true
+  twitter-card: true
+  #site-url: ""  
+  navbar:
+    title: "Mutual Los Huemules"
+    search: true 
+    logo: images/logo_huemul.png
+    background: "#2666b5"
+    foreground: "#FFFFFF"
+    border: true
+    pinned: true
+    back-to-top-navigation: false
+
+    right: 
+      - text: "Artistas"
+      - text: "Políticos"
+      - text: "Intelectuales"
+        
+  page-footer:
+    center: "Gracias por visitarnos. Mutual Los Huemules © 2026"
+      
+format:
+  html:
+    theme: journal
+    mainfont: "EB Garamond"
+    sansfont: "Inter"
+    fontsize: 1.1rem
+    fontcolor: "#330033"
+    linkcolor: "#009B86"
+    monofont: "EB Garamond"
+    css: styles.css
+    toc: true
+    highlight-style: monokai
+    title-block-banner: "#FFFFFF"
+    title-block-banner-color: "#2666b5"
+
+editor: source
+
+execute:
+  freeze: auto
+

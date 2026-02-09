@@ -1,0 +1,22 @@
+/* home.css - Styles used ONLY on the homepage (index.qmd) */
+
+/* 1. Hide the default Quarto Title Block (only on homepage) */
+#title-block-header,
+.quarto-title-block {
+    display: none !important;
+}
+
+/* 2. Remove default padding to allow Hero to touch navbar */
+.quarto-container {
+    padding-top: 0 !important;
+}
+
+#quarto-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+main.content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}

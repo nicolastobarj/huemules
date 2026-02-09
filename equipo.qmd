@@ -1,0 +1,144 @@
+---
+title: "Equipo Revista Némesis"
+toc: true
+sidebar: false
+toc-depth: 3
+lang: es
+page-layout: full
+---
+
+## Directorio
+
+::: {.team-grid}
+
+::: {.team-member}
+![](images/isma.jpg)
+
+<div class="member-name">Ismael Aguayo</div>
+<div class="member-bio">
+Licenciado en sociología UChile. Sus líneas de interes son la Inteligencia Artificial, las Ciencias Sociales Computacionales y el impacto de la transformación digital en la interacción social y la política.
+</div>
+:::
+
+::: {.team-member}
+![](images/chuma.jpeg)
+
+<div class="member-name">Domingo Monasterio</div>
+<div class="member-bio">
+Licenciado en sociología UChile. Sus intereses se centran en la Teoría de Sistemas, la Filosofía Contemporánea y el Posestructuralismo.
+</div>
+:::
+
+:::
+
+## Comité Editorial
+
+::: {.team-grid}
+
+::: {.team-member}
+![](images/bustos.jpeg)
+
+<div class="member-name">Benjamín Bustos</div>
+<div class="member-bio">
+Estudiante de cuarto año de sociología UChile. Sus intereses se centran en la teoría social y política, con énfasis en la crítica de la modernidad, la tecnología y el capitalismo contemporáneo.
+</div>
+:::
+
+::: {.team-member}
+![](images/cape.jpg)
+
+<div class="member-name">Joaquín Capetillo</div>
+<div class="member-bio">
+Licenciado en sociología UChile. Sus líneas de interés son la Teoría Crítica, la Teoría del Habitus y el Postestructuralismo.
+</div>
+:::
+
+::: {.team-member}
+![](images/jenny.jpeg)
+
+<div class="member-name">Jennifer Faundez</div>
+<div class="member-bio">
+Estudiante de cuarto año de sociología Uchile. Sus áreas de interés son la teoria latinoamericana, las politicas carcelarias y los métodos de investigación cualitativa.
+</div>
+:::
+
+::: {.team-member}
+![](images/marti.jpeg)
+
+<div class="member-name">Martina Lagos</div>
+<div class="member-bio">
+Estudiante de cuarto año de sociología UChile. Sus intereses son la teoría queer, la teoría decolonial y la relación entre el capitalismo, la inteligencia artificial y la geopolítica.
+</div>
+:::
+
+::: {.team-member}
+![](images/angie.jpeg)
+
+<div class="member-name">Angela Valeria</div>
+<div class="member-bio">
+Licenciada en sociología UChile. Sus áreas de interés son la sociología de la salud, la metodología y ética de la investigación social.
+</div>
+:::
+
+::: {.team-member}
+![](images/vicente.jpeg)
+
+<div class="member-name">Vicente Serrano</div>
+<div class="member-bio">
+Licenciado en Lingüística y Literatura Hispánica, diplomado en Periodismo Cultural, Crítica y Edición, y actual estudiante de Psicología UChile. Interés en psicología clínica y estudios culturales.
+</div>
+:::
+
+::: {.team-member}
+![](images/mari.jpeg)
+
+<div class="member-name">Mariana Sharp</div>
+<div class="member-bio">
+Licenciada en sociología UChile. Interesada en la sociología ambiental, sociología rural y políticas públicas.
+</div>
+:::
+
+:::
+
+## Comunicaciones y Extensión
+
+::: {.team-grid}
+
+::: {.team-member}
+![](images/javi.jpg)
+
+<div class="member-name">Javiera Ruiz Alvarado</div>
+<div class="member-bio">
+**Coordinadora de Extensión y Comunicaciones.**
+Estudiante de quinto año de sociología UChile y miembro del Equipo Directivo del Núcleo Teoría Social Hoy. Sus intereses abarcan el Feminismo Postestructuralista, la Sociología Latinoamericana y la Filosofía del Afecto.
+</div>
+:::
+
+::: {.team-member}
+![](images/pipe.jpg)
+
+<div class="member-name">Felipe Carvajal</div>
+<div class="member-bio">
+Licenciado en sociología y estudiante del magister en Trabajo Social UChile. Interesado en Estudios Urbanos, Política Habitacional y Sociología Digital.
+</div>
+:::
+
+::: {.team-member}
+![](images/matias.jpeg)
+
+<div class="member-name">Matías Rojas</div>
+<div class="member-bio">
+Estudiante de cuarto año de sociología UChile. Interesado en la sociología política y la historia de la filosofía.
+</div>
+:::
+
+::: {.team-member}
+![](images/leonor.jpeg)
+
+<div class="member-name">Leonor Sáez</div>
+<div class="member-bio">
+Estudiante de segundo año de sociología Uchile. Integrante del Núcleo de Sociología del Cuerpo y las Emociones. Sus áreas de interés son la Teoría Crítica, los estudios Latinoamericanos y el Interaccionismo Simbólico.
+</div>
+:::
+
+:::

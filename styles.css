@@ -1,0 +1,300 @@
+/* css styles */
+body {
+    background-color: #FCFBF4;
+    line-height: 1.8;
+}
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Custom Callout Color to match Némesis Purple */
+.callout-important {
+    border-left-color: #000000 !important;
+}
+
+.callout-important .callout-header {
+    background-color: #f0e6f0 !important;
+    /* A light purple background */
+    color: #000000 !important;
+}
+
+/* --- Container for Custom Layout --- */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* --- Callout: NOTE (Teal from Palette) --- */
+.callout-note {
+    border-left-color: #009b86 !important;
+}
+
+.callout-note .callout-header {
+    background-color: #e0f7fa !important;
+    /* Very light teal */
+    color: #00796b !important;
+    /* Slightly darker teal for text readability */
+}
+
+.callout-note .callout-icon {
+    color: #009b86 !important;
+    /* Icon matches border */
+}
+
+/* --- Callout: TIP (Orange from Palette) --- */
+.callout-tip {
+    border-left-color: #f36f10 !important;
+}
+
+.callout-tip .callout-header {
+    background-color: #fff3e0 !important;
+    /* Very light orange */
+    color: #e65100 !important;
+    /* Dark orange for text */
+}
+
+.callout-tip .callout-icon {
+    color: #f36f10 !important;
+}
+
+
+/* --- Team Page Styles (Mejorado para items únicos) --- */
+
+.team-grid {
+    display: flex;
+    /* FLEX es mejor para centrar elementos impares */
+    flex-wrap: wrap;
+    /* Permite que bajen a la siguiente línea si no caben */
+    justify-content: center;
+    /* LA CLAVE: Centra todo horizontalmente */
+    gap: 4rem;
+    /* Espacio generoso entre tarjetas */
+    margin-bottom: 4rem;
+    align-items: flex-start;
+    /* Alinea al inicio verticalmente */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* Control de ancho para que no se estiren cuando están solos */
+    width: 100%;
+    max-width: 350px;
+    /* <-- ESTO SOLUCIONA TU PROBLEMA */
+}
+
+.team-member img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    /* Color Némesis */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* Por si la imagen tiene transparencia */
+}
+
+.member-name {
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.member-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    /* Un gris oscuro para mejor lectura que el negro puro */
+}
+
+/* --- Pagination Styling (Némesis Brand) --- */
+
+/* 1. Botón Activo (El número de la página actual) */
+.pagination .page-item.active .page-link {
+    background-color: #000000 !important;
+    /* Tu morado oscuro */
+    border-color: #000000 !important;
+    color: #FFFFBC !important;
+    /* Tu color crema para el número */
+}
+
+/* 2. Botones Inactivos (Los otros números) */
+.pagination .page-link {
+    color: #000000 !important;
+    /* Texto morado */
+    background-color: transparent !important;
+    border: 1px solid #e0e0e0;
+    /* Un borde gris muy suave */
+}
+
+/* 3. Efecto Hover (Cuando pasas el mouse por encima) */
+.pagination .page-link:hover {
+    background-color: #f0e6f0 !important;
+    /* Un morado muy pálido */
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+/* 4. Ajuste para dispositivos móviles (opcional) */
+.page-item.disabled .page-link {
+    color: #999 !important;
+    background-color: transparent !important;
+}
+
+/* --- Estilo del Título en la Barra de Navegación --- */
+
+.navbar-title {
+    text-transform: none !important;
+    /* Adiós a las mayúsculas forzadas */
+    font-family: "EB Garamond", serif !important;
+    /* Tu tipografía oficial */
+    font-weight: 400;
+    /* Negrita para que destaque */
+    font-size: 1.3rem;
+    /* Tamaño ideal */
+    color: #ffffffff !important;
+    /* Tu color Crema (Némesis) */
+    letter-spacing: 0.5px;
+    /* Un poquito de aire entre letras */
+    vertical-align: middle;
+    /* Alineación perfecta con el logo */
+}
+
+
+.navbar-brand img {
+    max-height: 40px !important;
+    /* Ajusta este número a tu gusto (defecto es ~35px) */
+    width: auto;
+    /* Mantiene la proporción para que no se deforme */
+    margin-right: 0.12rem;
+    /* Un poco más de espacio entre logo y texto */
+}
+
+/* =========================================
+   HERO SECTION & HOMEPAGE FIXES (V3)
+   ========================================= */
+
+/* =========================================
+   HERO SECTION & HOMEPAGE FIXES (V3)
+   ========================================= */
+
+/* NOTE: Layout overrides (padding removal, hiding title block) 
+   have been moved to home.css to avoid affecting other pages. */
+
+
+/* 2. HERO BANNER */
+.hero-banner {
+    position: relative;
+    background-image: linear-gradient(rgba(248, 5, 5, 0.28), rgba(255, 0, 0, 0.36)), url("images/banner_huemul.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: -10px;
+    /* Slight negative margin just to be safe with nav */
+    padding: 60px 20px;
+}
+
+/* 3. TEXTO */
+.hero-content {
+    max-width: 900px;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-family: "Merriweather", serif;
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    font-weight: 900;
+    color: #ffffffff !important;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 300;
+    color: #fdfdfdff !important;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+}
+
+/* =========================================
+   BOTONES NATIVOS (SQUARED / JOURNAL STYLE)
+   ========================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* Estilo Base */
+.btn-lg {
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botón Primario */
+.btn-nemesis-primary {
+    background-color: #ffffffff !important;
+    border: 2px solid #ffffffff !important;
+    color: #000000 !important;
+    transition: all 0.2s ease;
+}
+
+.btn-nemesis-primary:hover {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    transform: translateY(-2px);
+    color: #000000 !important;
+}
+
+/* Botón Secundario */
+.btn-nemesis-outline {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid #ffffffff !important;
+    color: #fdfdfdff !important;
+    transition: all 0.2s ease;
+}
+
+.letra-cancion {
+  text-align: center;
+  color: #cc0000;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
