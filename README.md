@@ -16,4 +16,4 @@ Asimismo, en la capa inicial se alojan archivos de soporte de la página como `4
 
 Los archivos *.qmd* que están en las carpetas `product` están codificados de tal manera de favorecer el orden y la posibilidad de encontrar estos archivos. 
 
-#LINK PAGINA WEB
+[# LINK PAGINA WEB](https://nicolastobarj.github.io/docs/index.html)
