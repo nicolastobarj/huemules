@@ -20,6 +20,7 @@ listing:
     exclude:
       category: "no_visualize"
 ---
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 ```{=html}
 <section class="home-banner" style="background-image: url('images/banner_huemul.jpg');">

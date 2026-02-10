@@ -16,6 +16,7 @@ website:
     title: "Mutual Los Huemules"
     search: true 
     logo: images/logo_huemul.png
+    menu-toggle-position: right
     background: "#2666b5"
     foreground: "#FFFFFF"
     border: true
@@ -61,6 +62,7 @@ format:
     highlight-style: monokai
     title-block-banner: "#FFFFFF"
     title-block-banner-color: "#2666b5"
+    page-layout: full
 
 editor: source
 

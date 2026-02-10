@@ -594,32 +594,35 @@ Agrega esto a tu `home.css` (o `styles.css` si prefieres centralizar):
   }
 }
 
-/* Ajustes generales para móviles */
+/* FORZAR QUE LA WEB SEA RESPONSIVE EN CELULAR */
 @media (max-width: 768px) {
-  /* Forzar que las imágenes no se salgan de la pantalla */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
 
-  /* Hacer que las tablas tengan scroll horizontal para que no rompan el layout */
-  table {
-    display: block;
+  header, .home-hero, .hero-left, .hero-title, .hero-label {
     width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  /* Ajustar el ancho del cuerpo principal */
-  .quarto-container {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: normal !important;
+    word-break: break-word;
   }
 
-  /* Si usas márgenes laterales (margin-content), muévelos al final en móvil */
-  .column-margin {
-    margin-top: 1em;
-    border-top: 1px solid #eee;
-    padding-top: 1em;
+  .hero-logo img {
+    max-width: 160px;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .hero-label {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
