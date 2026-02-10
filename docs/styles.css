@@ -626,3 +626,27 @@ Agrega esto a tu `home.css` (o `styles.css` si prefieres centralizar):
     padding-right: 1rem;
   }
 }
+
+/* =========================================
+   BANNER HOME – IMAGEN MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .home-hero {
+    background-image: url("images/banner_mobile.jpg");
+    background-position: center top;
+    background-size: cover;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .home-hero {
+    min-height: 85vh;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+}

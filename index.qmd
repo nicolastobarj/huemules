@@ -40,7 +40,6 @@ listing:
 </section>
 ```
 
-
 ::: {.content-container}
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
 # Escritos
@@ -113,3 +112,5 @@ listing:
 
 </section>
 ```
+
+![Profile views](https://counter.kuber.studio/nicolastobarj/light/count.svg)
