@@ -593,3 +593,33 @@ Agrega esto a tu `home.css` (o `styles.css` si prefieres centralizar):
     word-break: break-word;
   }
 }
+
+/* Ajustes generales para móviles */
+@media (max-width: 768px) {
+  /* Forzar que las imágenes no se salgan de la pantalla */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Hacer que las tablas tengan scroll horizontal para que no rompan el layout */
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ajustar el ancho del cuerpo principal */
+  .quarto-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Si usas márgenes laterales (margin-content), muévelos al final en móvil */
+  .column-margin {
+    margin-top: 1em;
+    border-top: 1px solid #eee;
+    padding-top: 1em;
+  }
+}
