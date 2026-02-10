@@ -22,10 +22,22 @@ website:
     pinned: true
     back-to-top-navigation: false
 
-    right: 
-      - text: "Artistas"
-      - text: "Políticos"
-      - text: "Intelectuales"
+    right:
+      - icon: youtube
+        href: https://www.youtube.com/
+        aria-label: YouTube
+
+      - icon: tiktok
+        href: https://www.tiktok.com/
+        aria-label: TikTok
+
+      - icon: instagram
+        href: https://www.instagram.com/
+        aria-label: Instagram
+
+      - icon: envelope
+        href: mailto:contacto@loshuemules.cl
+        aria-label: Correo
         
   page-footer:
     center: "Gracias por visitarnos. Mutual Los Huemules © 2026"

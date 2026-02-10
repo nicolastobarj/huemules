@@ -17,34 +17,98 @@ listing:
     sort-ui: false           
     filter-ui: false         
     page-size: 9             
-    image-height: 250px      
-    image-placeholder: "images/huemul_banner.png"
     exclude:
       category: "no_visualize"
 ---
 
 ```{=html}
-<div class="hero-banner">
-  <div class="hero-content">
-    <h1>¿Algo grande está naciendo?</h1>
-    <h3>Cartas a la juventud chilena para levantarse a construir algo mejor</h3>
-    
-    <div class="hero-buttons">
-      <a href="#novedades" class="btn btn-nemesis-primary btn-lg" role="button">Ver novedades</a>
-      <a href="la_voz_2030.qmd" class="btn btn-nemesis-outline btn-lg" role="button">Enviar manuscrito</a>
+<section class="home-banner" style="background-image: url('images/banner_huemul.jpg');">
+
+  <div class="banner-overlay">
+
+    <div class="banner-right">
+      <nav class="banner-nav">
+        <a href="#novedades" class="banner-btn">Escritos</a>
+        <a href="#creemos" class="banner-btn">Manifiesto</a>
+        <a href="#somos" class="banner-btn">Somos</a>
+      </nav>
     </div>
+
   </div>
-</div>
+
+</section>
 ```
 
+
 ::: {.content-container}
-
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
-
-## Novedades
+# Escritos
 <hr style="border-top: 2px solid #000000ff; opacity: 1;">
-
 ::: {#product}
 :::
 
+<div id="creemos" style="padding-top: 60px; margin-top: -40px;"></div>
+# ¿En qué creemos?
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
 
+::: {.manifiesto-wrapper}
+
+<div class="manifiesto-logo">
+  <img src="images/logo_huemul.png" alt="Logo Huemules">
+</div>
+
+<h1 class="manifiesto-title">Manifiesto</h1>
+
+<ol class="manifiesto-text">
+  <li>Reconocemos la oscilación como el orden natural del mundo.</li>
+
+  <li>Debemos liberarnos de la inercia resultante de un siglo de ingenuidad modernista ideológica y de la falta de sinceridad cínica de su antónimo, hijo bastardo.</li>
+
+  <li>El movimiento hacia adelante se habilita por medio de una oscilación entre posiciones con ideas diametralmente opuestas, que operan como las polaridades pulsantes de una máquina eléctrica colosal, propulsando el mundo en acción.</li>
+
+  <li>Somos conscientes de las limitaciones inherentes a todo movimiento y experiencia, y de la futilidad de cualquier intento por trascenderlas. La incompletitud esencial de un sistema no exige sumisión, sino una adhesión orientada a vislumbrar una exterioridad posible. La existencia se enriquece cuando actuamos como si esos límites pudieran ser excedidos.</li>
+
+  <li>Todas las cosas están atrapadas en una diapositiva irrevocable hacia un estado de entropía máxima disimulada. La creación artística es contingente a la revelación de la diferencia en sí misma. En su cénit, el arte es experiencia inmediata de la diferencia.</li>
+
+  <li>El presente es un síntoma del nacimiento gemelo de la inmediatez y la obsolescencia. Las nuevas tecnologías permiten la experiencia simultánea de los hechos desde una multiplicidad de posiciones, facilitando la democratización de la historia.</li>
+
+  <li>Así como la ciencia busca la elegancia poética, el arte puede asumir la búsqueda de la verdad. Toda información es base de conocimiento, empírica o aforística. Debemos abrazar una síntesis científico-poética. El error genera sentido.</li>
+
+  <li>Se propone un romanticismo pragmático sin anclajes ideológicos. El metamodernismo es la condición mercurial que existe entre, más allá y en la búsqueda de múltiples horizontes fragmentarios. Debemos seguir adelante y oscilar.</li>
+</ol>
+:::
+
+
+<div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
+# ¿Quiénes somos?
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
+
+```{=html}
+<section class="home-section">
+
+  <div class="hero-left">
+    <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
+    <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+  </div>
+
+  <div class="hero-divider"></div>
+
+<div class="hero-right">
+  <div class="proyecto-texto">
+    <p>
+      Somos jóvenes desamparados que, ante un mundo en crisis y en constante transformación,
+      nos hemos reunido a conversar sobre el qué hacer con nuestro país.
+    </p>
+
+    <p>
+      Queremos transmitir a las nuevas generaciones la voluntad y las ganas de llevar a cabo
+      proyectos capaces de levantar el espíritu de Chile, articulando reflexión, crítica y acción
+      colectiva en tiempos de incertidumbre.
+    </p>
+  </div>
+  
+</div>
+
+
+</section>
+```

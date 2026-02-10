@@ -297,4 +297,258 @@ p {
   color: #cc0000;
   font-weight: 600;
   margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.manifiesto-wrapper {
+  max-width: 720px;
+  margin: 4rem auto 6rem auto;
+  text-align: center;
+}
+
+.manifiesto-logo img {
+  display: block;
+  max-width: 140px;
+  margin: 0 auto 2rem auto;
+}
+
+
+.manifiesto-title {
+  font-size: 2.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.manifiesto-text {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.manifiesto-text li {
+  margin-bottom: 1.6rem;
+}
+
+/* HERO LAYOUT */
+.home-hero {
+  display: grid;
+  grid-template-columns: 280px 1px 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 4rem auto 6rem auto;
+  padding: 0 1rem;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-logo {
+  max-width: 160px;
+  margin-bottom: 2rem;
+}
+
+.hero-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* SOCIALS */
+.hero-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hero-socials a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+.hero-socials a:hover {
+  text-decoration: underline;
+}
+
+/* VERTICAL DIVIDER */
+.hero-divider {
+  background-color: rgba(0,0,0,0.15);
+  width: 1px;
+}
+
+/* RIGHT COLUMN */
+.hero-right {
+  padding-right: 1rem;
+}
+
+.manifiesto-text {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.manifiesto-text li {
+  margin-bottom: 1.6rem;
+}
+
+/* BOTTOM LINE */
+.manifiesto-bottom-line {
+  margin-top: 3rem;
+  width: 120px;
+  height: 1px;
+  background-color: rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-divider {
+    display: none;
+  }
+
+  .hero-left {
+    margin-bottom: 3rem;
+  }
+}
+
+.proyecto-texto {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 680px;
+}
+
+.proyecto-texto p {
+  margin-bottom: 1.6rem;
+}
+
+
+🔑 **Anclas correctas según tu documento**:
+- `#creemos` → Manifiesto
+- `#somos` → ¿Quiénes somos?
+- `#novedades` → Escritos
+
+---
+
+## 3️⃣ CSS del banner (home.css)
+
+Agrega esto a tu `home.css` (o `styles.css` si prefieres centralizar):
+
+```css
+/* ===== HOME BANNER ===== */
+
+.home-banner {
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  min-height: 85vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8%;
+  background: linear-gradient(
+    to left,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0)
+  );
+}
+
+/* RIGHT COLUMN */
+.banner-right {
+  display: flex;
+  align-items: center;
+}
+
+/* BUTTON STACK */
+.banner-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* BUTTON STYLE */
+.banner-btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.7);
+  text-align: center;
+  min-width: 220px;
+  transition: all 0.25s ease;
+  background: rgba(0,0,0,0.25);
+}
+
+.banner-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .banner-overlay {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .banner-btn {
+    min-width: 200px;
+  }
+}
+
+/* ==============================
+   HOME SECTION (NOT HERO)
+   ============================== */
+
+.home-section {
+  display: grid;
+  grid-template-columns: 280px 1px 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 3rem auto 4rem auto;
+  padding: 0;
+}
+
+/* Divider */
+.home-section .hero-divider {
+  background-color: rgba(0,0,0,0.15);
+  width: 1px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-section {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section .hero-divider {
+    display: none;
+  }
 }
