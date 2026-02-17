@@ -1,0 +1,11 @@
+---
+title: "Por subir"
+subtitle: "Pronto más contenido"
+format: html
+css: ["../styles/retro.css"]
+date: 2024-01-03
+---
+
+![](../images/logo_huemul.png){fig-alt="Huemul"}
+
+Por subir. Pronto más contenido.

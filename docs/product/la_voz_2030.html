@@ -86,6 +86,7 @@ background: #FFFFFF;
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../styles/retro.css">
 <meta property="og:title" content="Jorge González y La voz del 2030 – Mutual Los Huemules">
 <meta property="og:description" content="Cómo la vida del cantautor chileno entrega pistas del estado actual de nuestra generación">
 <meta property="og:image" content="../images/la_voz_2030.png">
@@ -176,8 +177,67 @@ background: #FFFFFF;
   </div>
   <div class="about-contents">
      <main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <div class="site-nav-leftblock">
+      <div class="site-nav-left">
+        <a class="site-brand" href="../index.html">
+          <img src="../images/logo_huemul.png" alt="logo" class="site-brand-icon">Los Huemules
+        </a>
+      </div>
+      <nav class="site-nav-center">
+        <div class="site-links">
+          <a href="../index.html#novedades" class="site-link-btn">Escritos</a>
+          <a href="../index.html#creemos" class="site-link-btn">Manifiesto</a>
+          <a href="../index.html#somos" class="site-link-btn">Somos</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-nav-right">
+      <div class="site-socials" aria-hidden="false">
+        <a class="site-social" href="https://www.instagram.com/" aria-label="Instagram"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zm6.4-3.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 9.6A2.4 2.4 0 1 1 9.6 12 2.4 2.4 0 0 1 12 9.6z"></path></svg></a>
+        <a class="site-social" href="https://www.youtube.com/" aria-label="YouTube"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1-2-.1-5-.1-5-.1h-.1s-3 0-5 .1c-.4 0-1.3.1-2.1 1C1.2 5.8 1 7.5 1 7.5S1 9.6 1.1 11.8v.4C1.2 15 2.6 16 3 16.5c1 .6 4.2.6 4.2.6s.4 0 2 .1c1.2.1 2.8.1 2.8.1s1.8 0 2.9-.1c1.6-.2 2-.1 2-.1s3.2 0 4.2-.6c.5-.4 1.9-1.5 1.9-4.1v-.4c.1-2.2.1-4.3.1-4.3zM9.8 14.6V9.4l5.1 2.6-5.1 2.6z"></path></svg></a>
+        <a class="site-social" href="https://www.tiktok.com/" aria-label="TikTok"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v11.2A4.8 4.8 0 1 1 11.2 10V7h2.8A6 6 0 1 0 20 13.8V6.4A6.2 6.2 0 0 1 16 3z"></path></svg></a>
+      </div>
+      <div class="nav-search">
+        <button class="nav-search-btn" aria-label="Abrir búsqueda">
+          <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#006FB3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </button>
+        <form class="nav-search-form" role="search">
+          <input type="search" name="q" placeholder="Buscar en la página" aria-label="Buscar en la página">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const navSearchBtn = document.querySelector('.nav-search-btn');
+  const siteNavInner = document.querySelector('.site-nav');
+  const navSearchForm = document.querySelector('.nav-search-form');
+  const navSearchInput = navSearchForm ? navSearchForm.querySelector('input[type="search"]') : null;
+  if(navSearchBtn && siteNavInner){
+    navSearchBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      siteNavInner.classList.toggle('search-open');
+      if(siteNavInner.classList.contains('search-open') && navSearchInput){ navSearchInput.focus(); }
+    });
+  }
+  if(navSearchForm){
+    navSearchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const q = (navSearchInput && navSearchInput.value || '').trim();
+      if(!q) return;
+      const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li'));
+      const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase()));
+      if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.background='rgba(255,255,0,0.15)'; setTimeout(()=>{ found.style.background=''; },1800); }
+      else { alert('No se encontraron resultados para "' + q + '"'); }
+    });
+  }
+});
+</script>
 <p>En el eterno ensayo <em>Autosuficiencia. La confianza en uno mismo</em>, Ralph Waldo Emerson quedó grabado en la memoria como el primer romántico de Norteamérica. El poeta veía la historia como un juego donde grandes personalidades tratan de tallar su espíritu en las instituciones sociales, para luego encontrar la inmortalidad al lado de las nuevas costumbres que fundaron en su pueblo. Aunque el título del ensayo da a entender que hay en su discurso una orientación hacia la autoayuda, lo cierto es que en su trabajo habitan intenciones bastante grandes, y toda palabra de aliento que expresa hacia el lector la hace apoyada en letradas referencias y un trato delicado del lenguaje.</p>
-<p>La tesis historicista que hay detrás de este ensayo —y que me interesa recalcar— es bastante simple: que son aquellos individuos servidos de su propia fuerza de voluntad y rectitud del carácter los que tuercen la historia, y que, de algún modo, escriben las pautas de las futuras generaciones a través del carisma anidado en su forma de ser. Emerson destaca que el Derecho Romano es la encarnación jurídica de Cicerón, así como el constitucionalismo norteamericano expandido en el mundo es la presencia omnipresente de los padres fundadores como Jefferson o Madison. Napoleón le dio a Francia una cultura imperial que aspira a la expansión, y el recién difunto José Mujica, a mi parecer, cristaliza la sabiduría naturalista de la tradición chacrera uruguaya.</p>
+<p>La tesis historicista que hay detrás de este ensayo —y que me interesa recalcar— es bastante simple: que son aquellos individuos servidos de su propia fuerza de voluntad y rectitud del carácter los que tuercen la historia, y que, de algún modo, escriben las pautas de las futuras generaciones a través del carisma anidado en su forma de ser. Emerson destaca que el Derecho Romano es la encarnación jurídica de Cicerón, así como el constitucquarto previewionalismo norteamericano expandido en el mundo es la presencia omnipresente de los padres fundadores como Jefferson o Madison. Napoleón le dio a Francia una cultura imperial que aspira a la expansión, y el recién difunto José Mujica, a mi parecer, cristaliza la sabiduría naturalista de la tradición chacrera uruguaya.</p>
 <p>Hay individuos que son tan únicos, y que expelen una originalidad de tal intensidad, que terminan por representar a todo un tiempo, a toda una época, a una generación, sin siquiera buscarlo. Me parece que este es el caso de Jorge González, un músico que hacía rato que el tiempo debiese haberle quitado protagonismo, pero que por su genialidad, tan sintonizadora con el estado de permanente irritación cotidiana del chileno de a pie, no ha sido posible.</p>
 <p>A finales de 2024 se publicó el podcast <em>Necesito poder respirar</em>, ampliamente difundido y galardonado entre los internautas. En este relato auditivo se hace una travesía sobre el significado que reserva la trayectoria vital del que me atrevo a llamar cantautor chileno. Jorge González es la figura que hizo del desencanto con la realidad del país música rebelde, capaz de interpretar los problemas sociales más profundos y duraderos del mismo. No creo estar equivocado si intuyo que en su nombre hay una voz que trasciende generaciones. Es la voz de los 80’, pero también coreaban sus letras la camada que llenó<br>
 el Estadio Nacional a inicios de los 2000’. Incluso en el estallido social de 2019 el <em>Baile de los que sobran</em> se convertía en el lema de las juventudes que salían a protestar.</p>
@@ -261,12 +321,12 @@ el Estadio Nacional a inicios de los 2000’. Incluso en el estallido social de 
 <p>¿Dejaremos la inercia de los 2020?<br> ¿Abriremos los ojos y nos pondremos de pie?<br> ¿Escucharemos nuestros latidos?<br> ¿Sintonizaremos nuestros sonidos?<br> ¿Agudizaremos nuestros sentidos?<br> ¡¿Nos daremos cuenta de que estamos vivos?!<br> ¿Vendrá la fuerza?<br> ¿O nos resignaremos a que la voz de los 80’ vuelva, nuevamente, a ser la voz del 2030?</p>
 </div>
 </div>
-<hr style="margin: 10rem 0;">
-<section id="comments">
+<hr style="margin: 14rem 0 8rem;">
+<section id="comments" style="padding: 4rem 0 3rem;">
 <h2>
 Comparte tus reflexiones
 </h2>
-<div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="be4850af-a53a-44ac-a162-b3b5ed42085b" data-page-id="{{ page.url }}" data-page-url="{{ page.url }}" data-page-title="{{ title }}">
+<div id="cusdis_thread" style="min-height: 1000px;" data-host="https://cusdis.com" data-app-id="be4850af-a53a-44ac-a162-b3b5ed42085b" data-page-id="{{ page.url }}" data-page-url="{{ page.url }}" data-page-title="{{ title }}">
 </div>
 <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
 </section>
