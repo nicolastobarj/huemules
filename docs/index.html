@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author','listing-date','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author','listing-date','listing-reading-time','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
@@ -230,7 +230,7 @@ window.Quarto = {
 
         <div class="site-links">
 
-          <a href="./#novedades" class="site-link-btn">Escritos</a>
+          <a href="./escritos.html" class="site-link-btn">Escritos</a>
 
           <a href="./#creemos" class="site-link-btn">Manifiesto</a>
 
@@ -325,7 +325,7 @@ window.Quarto = {
       </div>
 
       <div class="top-center">
-        <a href="#novedades" class="banner-btn">Escritos</a>
+        <a href="./escritos.html" class="banner-btn">Escritos</a>
         <a href="#somos" class="banner-btn">Somos</a>
         <a href="#creemos" class="banner-btn">Manifiesto</a>
       </div>
@@ -351,11 +351,25 @@ document.addEventListener('DOMContentLoaded', function(){
   const navSearchForm = document.querySelector('.nav-search-form');
   const navSearchInput = navSearchForm ? navSearchForm.querySelector('input[type="search"]') : null;
 
+  function isInsideBanner(y){
+    const bannerThreshold = banner ? Math.max(0, banner.offsetHeight - 20) : 320;
+    return y < bannerThreshold;
+  }
+
+  let wasInsideBanner = isInsideBanner(window.scrollY || window.pageYOffset || 0);
+
   function onScroll(){
     const y = window.scrollY || window.pageYOffset;
     if(y > 40){ document.body.classList.add('hero-scrolled'); } else { document.body.classList.remove('hero-scrolled'); }
     const threshold = banner ? (banner.offsetHeight - 80) : 260;
     if(y > threshold){ document.body.classList.add('show-site-nav'); } else { document.body.classList.remove('show-site-nav'); }
+
+    const insideBanner = isInsideBanner(y);
+    if(insideBanner !== wasInsideBanner){
+      if(!insideBanner){ startFall(); }
+      else { returnLetters(); }
+      wasInsideBanner = insideBanner;
+    }
   }
 
   // split text into letter spans (idempotent)
@@ -388,7 +402,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const bannerSearchBtn = document.querySelector('.banner-search-btn'); const bannerSearchForm = document.querySelector('.banner-search-form'); const bannerSearchInput = bannerSearchForm ? bannerSearchForm.querySelector('input[name="bq"]') : null; if(bannerSearchBtn && banner){ bannerSearchBtn.addEventListener('click', function(e){ e.preventDefault(); banner.classList.toggle('search-open'); if(banner.classList.contains('search-open') && bannerSearchInput) bannerSearchInput.focus(); }); } if(bannerSearchForm){ bannerSearchForm.addEventListener('submit', function(e){ e.preventDefault(); const q = (bannerSearchInput && bannerSearchInput.value || '').trim(); if(!q) return; const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li')); const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase())); if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.transition = 'box-shadow .4s ease, background .4s ease'; const origBg = found.style.background; found.style.background = 'rgba(255,255,0,0.15)'; setTimeout(()=>{ found.style.background = origBg; }, 1800); banner.classList.remove('search-open'); } else { alert('No se encontraron resultados para "' + q + '"'); } }); }
 
-  const observer = new MutationObserver(()=>{ if(document.body.classList.contains('hero-scrolled')){ startFall(); } else { returnLetters(); } }); observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>
@@ -401,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <hr style="border-top: 2px solid #330033; opacity: 1;">
 <div id="listing-product" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1769914800000" data-listing-file-modified-sort="1771377557339" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3452">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1769914800000" data-listing-file-modified-sort="1771382406150" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3442">
 <a href="./product/la_voz_2030.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -412,10 +425,13 @@ document.addEventListener('DOMContentLoaded', function(){
 Jorge González y La voz del 2030
 </h5>
 <div class="card-subtitle listing-subtitle">
-Cómo la vida del cantautor chileno entrega pistas del estado actual de nuestra generación
+Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes a la hora de conformar algo grande
 </div>
 <div class="listing-reading-time card-text text-muted">
 18 minutos
+</div>
+<div class="card-text listing-description">
+En el eterno ensayo <em>Autosuficiencia. La confianza en uno mismo</em>, Ralph Waldo Emerson quedó grabado en la memoria como el primer romántico de Norteamérica. El poeta veía la…
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -443,6 +459,9 @@ Pronto más contenido
 <div class="listing-reading-time card-text text-muted">
 1 minutos
 </div>
+<div class="card-text listing-description">
+Por subir. Pronto más contenido.
+</div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
 
@@ -469,6 +488,9 @@ Pronto más contenido
 <div class="listing-reading-time card-text text-muted">
 1 minutos
 </div>
+<div class="card-text listing-description">
+Por subir. Pronto más contenido.
+</div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
 
@@ -494,6 +516,9 @@ Pronto más contenido
 </div>
 <div class="listing-reading-time card-text text-muted">
 1 minutos
+</div>
+<div class="card-text listing-description">
+Por subir. Pronto más contenido.
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -581,6 +606,21 @@ Se propone un romanticismo pragmático sin anclajes ideológicos. El metamoderni
     </p>
   </div>
 </div>
+</section>
+<section id="galeria" class="home-gallery">
+  <h1>Piezas de museo para representar nuestro pensamiento</h1>
+  <hr style="border-top: 2px solid #000000ff; opacity: 1;">
+
+  <div class="museum-gallery">
+    <figure class="museum-frame figure">
+      <img src="images/igualdad_pinguinos.jpg" alt="Igualdad pingüinos" class="figure-img">
+      <figcaption>Igualdad entre Pingüinos de Humboldt</figcaption>
+    </figure>
+    <figure class="museum-frame figure">
+        <img src="images/soy_ese_penguin.jpg" alt="¡Soy ese!" class="figure-img">
+        <figcaption>¡Soy ese!</figcaption>
+    </figure>
+  </div>
 </section>
 
 

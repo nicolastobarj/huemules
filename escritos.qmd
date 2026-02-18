@@ -1,0 +1,36 @@
+---
+lang: es
+toc: false
+page-layout: full
+css: [styles/retro.css]
+
+listing:
+  - id: escritos
+    contents: product
+    type: grid
+    sort:
+      - "date desc"
+      - "title"
+    fields: [image, title, subtitle, author, date]
+    categories: false
+    sort-ui: false
+    filter-ui: true
+    page-size: 100
+---
+
+# Todas nuestras publicaciones
+
+::: {.escritos-page-layout}
+::: {.escritos-main}
+::: {#escritos}
+:::
+:::
+
+::: {.escritos-side}
+![Chile vertical](images/vertical_chile.svg){.escritos-side-image}
+
+![Guaripolo](images/guaripolo.png)
+
+![Macha](images/macha_vertical.jpg)
+:::
+:::

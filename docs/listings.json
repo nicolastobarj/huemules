@@ -7,5 +7,14 @@
       "/product/por_subir_2.html",
       "/product/por_subir_1.html"
     ]
+  },
+  {
+    "listing": "/escritos.html",
+    "items": [
+      "/product/la_voz_2030.html",
+      "/product/por_subir_3.html",
+      "/product/por_subir_2.html",
+      "/product/por_subir_1.html"
+    ]
   }
 ]

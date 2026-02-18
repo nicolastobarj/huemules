@@ -12,15 +12,13 @@ listing:
     sort:
       - "date desc"
       - "title"
-    fields: [image, title, subtitle, author, date, reading-time]
+    fields: [image, title, subtitle, author, date, reading-time, description]
     categories: false
     sort-ui: false
     filter-ui: false
-    page-size: 9
+    page-size: 4
     exclude:
       category: "no_visualize"
-      limit: 4
-      wrapper: {.escritos-grid}
 ---
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +52,7 @@ listing:
       </div>
 
       <div class="top-center">
-        <a href="#novedades" class="banner-btn">Escritos</a>
+        <a href="./escritos.html" class="banner-btn">Escritos</a>
         <a href="#somos" class="banner-btn">Somos</a>
         <a href="#creemos" class="banner-btn">Manifiesto</a>
       </div>
@@ -206,5 +204,23 @@ document.addEventListener('DOMContentLoaded', function(){
     </p>
   </div>
 </div>
+</section>
+```
+
+```{=html}
+<section id="galeria" class="home-gallery">
+  <h1>Piezas de museo para representar nuestro pensamiento</h1>
+  <hr style="border-top: 2px solid #000000ff; opacity: 1;">
+
+  <div class="museum-gallery">
+    <figure class="museum-frame">
+      <img src="images/igualdad_pinguinos.jpg" alt="Igualdad pingüinos">
+      <figcaption>Igualdad entre Pingüinos de Humboldt</figcaption>
+    </figure>
+    <figure class="museum-frame">
+        <img src="images/soy_ese_penguin.jpg" alt="¡Soy ese!">
+        <figcaption>¡Soy ese!</figcaption>
+    </figure>
+  </div>
 </section>
 ```

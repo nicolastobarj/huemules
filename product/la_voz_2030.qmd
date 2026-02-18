@@ -1,6 +1,6 @@
 ---
 title: "Jorge González y La voz del 2030"
-subtitle: "Cómo la vida del cantautor chileno entrega pistas del estado actual de nuestra generación"
+subtitle: "Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes a la hora de conformar algo grande"
 author: "Nicolás Tobar Jorquera"
 date: 02-01-2026
 image: ../images/la_voz_2030.png
@@ -54,7 +54,7 @@ Aunque estos refranes peinaban a contrapelo la narrativa del «jaguar de Latinoa
 Los Prisioneros, en su etapa de natalidad, declaraban tener solo una ideología, la de ir en contra de toda ideología. Cómo dice su manifiesto:
 
 ::: {layout="[50,50]" layout-valign="center"}
-<div class="letra-cancion">
+<div class="hero-label">
 No necesitamos banderas<br>
 No reconocemos fronteras<br>
 No aceptaremos filiaciones<br>
@@ -70,7 +70,7 @@ En sus primeros pasos como artista, Jorge González demostró cierta manía demo
 ::: {layout="[50,50]" layout-valign="center"}
 {{< video https://youtu.be/a6hLliDlfrA?si=2iuXM7-lipC-IaeZ start="90" >}}
 
-<div class="letra-cancion">
+<div class="hero-label">
 Como ves no soy muy artista<br>
 Pero estaré en los escenarios y en las fotos de los diarios<br>
 Exijo ser un héroe<br>
@@ -101,7 +101,7 @@ Cuando Los Prisioneros quebraron por primera vez, Jorge decidió firmar un contr
 
 ::: {layout="[50,50]" layout-valign="center"}
 
-<div class="letra-cancion">
+<div class="hero-label">
 Una casa en un árbol<br>
 Donde tenga mis dibujos<br>
 Y mis historias<br>
@@ -120,7 +120,7 @@ Un hombre ovallino que aclama un réquiem por la generación de los 80’ señal
 
 ::: {layout-align="center"}
 
-<div class="letra-cancion">
+<div class="hero-label">
 Oye, es en gran parte a lo que vine<br>
 Oye, no se me puede olvidar  
 </div>
@@ -135,7 +135,7 @@ Algún paralelismo tiene Chile con el componente cálido y nostálgico de *La Ca
 
 {{< video https://youtu.be/GlLWO20_0KQ?si=XX35XtTwTgSnhMuM&t=192 >}}
 
-<div class="letra-cancion">
+<div class="hero-label">
 Escúchame una vez<br>
 Todo tiene final  
 </div>
@@ -152,7 +152,7 @@ La primera canción que dieron a luz Los Prisioneros, la voz de los 80’, es un
 
 ::: {layout-align="center"}
 
-<div class="letra-cancion">
+<div class="hero-label">
 ¿Dejaremos la inercia de los 2020?<br>
 ¿Abriremos los ojos y nos pondremos de pie?<br>
 ¿Escucharemos nuestros latidos?<br>
@@ -172,12 +172,13 @@ La primera canción que dieron a luz Los Prisioneros, la voz de los 80’, es un
 
   <div
     id="cusdis_thread"
-    style="min-height: 1000px;"
+    class="comments-thread"
     data-host="https://cusdis.com"
     data-app-id="be4850af-a53a-44ac-a162-b3b5ed42085b"
     data-page-id="product/la_voz_2030"
     data-page-url="product/la_voz_2030.html"
-    data-page-title="Jorge González y La voz del 2030">
+    data-page-title="Jorge González y La voz del 2030"
+    data-page-size="10">
   </div>
 
   <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
