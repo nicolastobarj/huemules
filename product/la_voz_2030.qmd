@@ -37,6 +37,30 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
+
+<style>
+.tweet-sidebox {
+  float: right;
+  width: min(320px, 42%);
+  margin: 0.35rem 0 0.9rem 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid var(--retro-blue);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.tweet-sidebox .twitter-tweet {
+  margin: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .tweet-sidebox {
+    float: none;
+    width: 100%;
+    margin: 0.6rem 0 1rem;
+  }
+}
+</style>
 ```
 En el eterno ensayo *Autosuficiencia. La confianza en uno mismo*, Ralph Waldo Emerson quedó grabado en la memoria como el primer romántico de Norteamérica. El poeta veía la historia como un juego donde grandes personalidades tratan de tallar su espíritu en las instituciones sociales, para luego encontrar la inmortalidad al lado de las nuevas costumbres que fundaron en su pueblo. Aunque el título del ensayo da a entender que hay en su discurso una orientación hacia la autoayuda, lo cierto es que en su trabajo habitan intenciones bastante grandes, y toda palabra de aliento que expresa hacia el lector la hace apoyada en letradas referencias y un trato delicado del lenguaje.  
 
@@ -83,7 +107,14 @@ Adoptando un estilo inusual pero sumamente común, Jorge conduce a Los Prisioner
 
 Bajo este gesto, la voz de los 80’ resuena en la voz del 2020. Actualmente, una ola de cantantes de música urbana dispone de la misma actitud. Se trata de jóvenes que a una edad temprana —19, 20 años— obtienen fama global de modo acelerado, y las letras con las que se hacen millonarios tienen un solo sentido: el de narrar lo que viven, sus experiencias fatales, inundadas por el narco, la prostitución, la precariedad. Los 12 juegos y los colegios numerados se han quedado cortos para las vivencias hostiles de las nuevas juventudes de hoy.  
 
+<div class="tweet-sidebox">
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">Y pago mis impuestos como corresponde si eso es lo k tanto les preocupa chupapicos kls del sistema</p>&mdash; Pablo Chill-E (@LaflarePaulito) <a href="https://twitter.com/LaflarePaulito/status/1747653398894194949?ref_src=twsrc%5Etfw">January 17, 2024</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 Hasta en las entrevistas el paralelismo histórico es notorio. En el programa *En Crudo*, el artista de Puente Alto que funda esta nueva corriente de trap-reggaeton, Pablo Chill-E, expresó una desafiante postura frente al orden establecido: «nosotros nos burlamos del sistema», para luego añadir una frase aún más explícita: «meterle el pico al sistema y que no sea al revés, ahora cobramos más». Incluso, ante quienes cuestionaron su polémica situación tributaria les respondió por twitter: «pago mis impuestos como corresponde si eso es lo que tanto les preocupa chupapicos kls del sistema». Jere Klein complementa: «Yo creo que a la gente le gusta mi música porque digo lo que muchos piensan, pero no se atreven a decir. Hablo de lo que vivimos los jóvenes» — «Todo pasó muy rápido. Un día estaba en el colegio y al otro día mis canciones sonaban en todos lados. Es una locura, pero estoy agradecido».  
+
+<div style="clear: both;"></div>
 
 Jorge marcó un antes y un después, un precedente donde los músicos que más suenan no se agrupan en bandas notables, con integrantes dotados de una técnica obtenida en años de preparación. Los Prisioneros ofrecieron otra propuesta a los tradicionales autores campestres, que cantaban melodías folklóricas y escribían letras inaccesibles para la jerga cotidiana. Jorge no era otro, no era el vestido de poncho ni el hombre virtuoso. Jorge era parte del pueblo mismo; jóvenes de a pie, que con su «baja cultura» lograban expresar algo significativo. No por nada a las afueras de sus primeros conciertos la gente celebraba: —«Qué grande Los Prisioneros, weón, es gente como uno, que se atreve a decir la verdad», —«Estos locos sí saben po’, no andan con medias tintas». Su música tenía la misma intención que la de Pablo de Rokha en la poesía. Quería cantar la realidad tal como se le aparecía, sin adornos, a modo de espejo con sus iguales. Por eso hay en la reanimación del género urbano de hoy algo de Los Prisioneros.  
 
