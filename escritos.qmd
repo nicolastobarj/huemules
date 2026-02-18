@@ -34,3 +34,14 @@ listing:
 ![Macha](images/macha_vertical.jpg)
 :::
 :::
+
+```{=html}
+<section class="escritos-subscribe">
+  <div class="escritos-subscribe-inner">
+    <h2 class="escritos-subscribe-title">Suscríbete y te avisamos de nuevas publicaciones</h2>
+    <form class="escritos-subscribe-form" action="#" method="POST" onsubmit="return false;">
+      <input type="email" name="email" placeholder="Ingresa tu correo" aria-label="Correo electrónico" required>
+    </form>
+  </div>
+</section>
+```

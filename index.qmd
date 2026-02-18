@@ -52,7 +52,7 @@ listing:
       </div>
 
       <div class="top-center">
-        <a href="./escritos.html" class="banner-btn">Escritos</a>
+        <a href="./escritos.html" class="banner-btn">Blog</a>
         <a href="#somos" class="banner-btn">Somos</a>
         <a href="#creemos" class="banner-btn">Manifiesto</a>
       </div>
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 ```{=html}
 <div class="all-posts-cta">
-  <a href="./escritos.html" class="banner-btn">Todas las publicaciones</a>
+  <a href="./escritos.html" class="banner-btn">Ver blog completo</a>
 </div>
 ```
 
