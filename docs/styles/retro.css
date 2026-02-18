@@ -362,13 +362,18 @@ body.show-site-nav .site-nav { transform: translateY(0); }
 @media (max-width:880px){
   .site-nav { height:56px; }
   .site-nav-left, .site-nav-right { flex:0.9; }
-  .site-nav-center { display:none; }
+  .site-nav-center { display:block; }
+  .site-links { gap: 0; }
+  .site-links .site-link-btn:nth-child(n+2) { display: none; }
+  .site-links .site-link-btn:first-child { padding: 8px 10px; }
 }
 
 @media (max-width: 880px) {
   .hero-title { font-size: 2.2rem; }
   .hero-subtitle { font-size: 0.95rem; }
   .site-nav { height:56px; }
+  .top-center .banner-btn:nth-child(n+2) { display: none; }
+  .top-center { justify-content: center; }
 }
 
 /* Hide Quarto's default navbar to use our custom one */
@@ -734,20 +739,37 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
     grid-template-columns: 1fr;
   }
 
+  .escritos-main {
+    order: 1;
+  }
+
   .escritos-side {
     position: static;
-    order: -1;
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 10px;
   }
 
+  .escritos-side .quarto-figure,
+  .escritos-side figure,
+  .escritos-side p {
+    width: auto;
+    margin: 0;
+  }
+
   .escritos-side-image {
-    width: min(100%, 120px);
+    width: 110px;
     max-height: 220px;
     object-fit: contain;
   }
 
   .escritos-side img {
-    width: min(100%, 120px);
+    width: 110px;
     max-height: 220px;
   }
 
@@ -830,7 +852,21 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
 .banner-social-vertical svg { width:20px; height:20px; fill:#fff; }
 
 @media (max-width: 880px){
-  .banner-vertical-socials { display:none; }
+  .banner-vertical-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 30px;
+  }
+
+  .banner-social-vertical {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 @media (max-width:880px){
@@ -903,4 +939,27 @@ body.show-site-nav .quarto-title-block {
 /* Make anchor jumps and headings respect the fixed header */
 html { scroll-padding-top: calc(var(--site-nav-height) + var(--site-nav-gap)); }
 h1, h2, h3 { scroll-margin-top: calc(var(--site-nav-height) + var(--site-nav-gap) + 6px); }
+
+@media (max-width: 880px) {
+  #quarto-document-content .quarto-layout-panel[data-layout="[50,50]"] > .quarto-layout-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #quarto-document-content .quarto-layout-panel[data-layout="[50,50]"] .quarto-layout-cell {
+    width: 100% !important;
+    flex-basis: auto !important;
+    order: 2;
+  }
+
+  #quarto-document-content .quarto-layout-panel[data-layout="[50,50]"] .hero-label.quarto-layout-cell {
+    order: 1;
+  }
+
+  #quarto-document-content .quarto-layout-panel[data-layout="[50,50]"] .quarto-video {
+    width: min(100%, 340px);
+    margin: 0 auto;
+  }
+}
 

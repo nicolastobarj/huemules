@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 ```{=html}
 <section id="galeria" class="home-gallery">
-  <h1>Para representar nuestro pensamiento</h1>
+  <h1>Para representar nuestro pensamiento...</h1>
   <hr style="border-top: 2px solid #000000ff; opacity: 1;">
 
   <div class="museum-gallery">
