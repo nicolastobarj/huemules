@@ -544,6 +544,14 @@ No hay resultados
   <div class="hero-left">
     <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
     <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+    <hr class="hero-left-divider">
+    <h3 class="lecturas-title" data-anchor-id="quiénes-somos">Estas son nuestras últimas lecturas :)</h3>
+    <div id="gr_updates_widget">
+      <iframe id="the_iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&amp;num_updates=5&amp;user=144700241&amp;width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
+      <div id="gr_footer">
+        <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png"></a>
+      </div>
+    </div>
   </div>
 
   <div class="hero-divider"></div>
@@ -565,7 +573,7 @@ No hay resultados
 </section>
 <figure class="nosotros-photo-strip figure" aria-label="Foto del equipo Huemules">
   <img src="images/foto_nosotros.jpeg" alt="Integrantes de Los Huemules en su cafetería de encuentro" class="nosotros-photo-img figure-img">
-  <figcaption>Estos somos nosotros, en la cafetería en la que nos juntamos a escribir</figcaption>
+  <figcaption>Estos somos nosotros en la cafetería en la que nos juntamos a escribir</figcaption>
 </figure>
 <div id="creemos" style="padding-top: 60px; margin-top: -40px;">
 
@@ -595,6 +603,9 @@ No hay resultados
 </ol>
 </div>
 <aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
+<h3 class="manifiesto-playlist-title">
+Música que nos ayuda a seguir creyendo en la vida (y ennuestro país)
+</h3>
 <iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
 </iframe>
 </aside>
@@ -604,6 +615,7 @@ No hay resultados
 document.addEventListener('DOMContentLoaded', function () {
   const mainCol = document.querySelector('.manifiesto-main');
   const spotify = document.getElementById('manifiesto-spotify');
+  const playlistTitle = document.querySelector('.manifiesto-playlist-title');
   if (!mainCol || !spotify) return;
 
   function syncPlaylistHeight() {
@@ -611,7 +623,8 @@ document.addEventListener('DOMContentLoaded', function () {
       spotify.style.height = '152px';
       return;
     }
-    const targetHeight = Math.max(mainCol.offsetHeight, 420);
+    const titleHeight = playlistTitle ? playlistTitle.offsetHeight : 0;
+    const targetHeight = Math.max(mainCol.offsetHeight - titleHeight - 10, 0);
     spotify.style.height = targetHeight + 'px';
   }
 
@@ -746,10 +759,10 @@ document.addEventListener('DOMContentLoaded', function () {
     </form>
   </div>
 </section>
-
-
-
 </section></div>
+
+
+
 
 
 

@@ -353,26 +353,44 @@ a:hover { color: var(--retro-red); }
 }
 
 .manifiesto-columns {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(300px, 3fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
   align-items: stretch;
 }
 
 .manifiesto-main {
   min-width: 0;
+  flex: 0 0 70%;
+  max-width: 70%;
 }
 
 .manifiesto-playlist {
   min-width: 0;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-self: stretch;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.manifiesto-playlist-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--retro-blue);
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .manifiesto-playlist iframe {
   width: 100%;
   height: 352px;
-  min-height: 352px;
+  min-height: 0;
   display: block;
   border: 0;
   border-radius: 12px;
@@ -400,6 +418,7 @@ a:hover { color: var(--retro-red); }
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   border-bottom: 0;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .inspiracion-card img {
@@ -407,6 +426,18 @@ a:hover { color: var(--retro-red); }
   display: block;
   height: auto;
   max-height: none;
+  transition: transform .2s ease;
+}
+
+.inspiracion-card:hover,
+.inspiracion-card:focus-visible {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+}
+
+.inspiracion-card:hover img,
+.inspiracion-card:focus-visible img {
+  transform: scale(1.02);
 }
 
 .inspiraciones-title {
@@ -420,15 +451,6 @@ a:hover { color: var(--retro-red); }
 }
 
 @media (max-width: 1060px) {
-  .manifiesto-columns {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .manifiesto-playlist iframe {
-    min-height: 420px;
-  }
-
   .inspiraciones-layout {
     gap: 12px;
   }
@@ -462,6 +484,10 @@ a:hover { color: var(--retro-red); }
     margin-top: 6px;
   }
 
+  .manifiesto-playlist-title {
+    text-align: center;
+  }
+
   .manifiesto-playlist iframe {
     height: 152px !important;
     min-height: 152px !important;
@@ -472,6 +498,63 @@ a:hover { color: var(--retro-red); }
 .hero-left { text-align: center; padding: 8px; }
 .hero-logo { width: 140px; border-radius: 8px; border: 2px solid rgba(0,0,0,0.04); box-shadow: 0 6px 12px var(--shadow); }
 .hero-divider { width: 2px; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.01)); margin: 0 12px; }
+
+.hero-left-divider {
+  width: min(100%, 250px);
+  border: 0;
+  border-top: 2px solid #683205;
+  margin: 0.35rem auto 0.75rem;
+  opacity: 0.9;
+}
+
+.lecturas-title {
+  margin: 0 0 0.55rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #382110;
+  font-style: italic;
+}
+
+#gr_updates_widget {
+  margin: 0.8rem auto 0;
+  border-radius: 5px;
+  background-color:#fff;
+  border:solid #683205 10px;
+  -webkit-box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  -moz-box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  box-shadow: 0px 0px 4px 1px #595959,
+  inset 0px 0px 0px 1px #7D730B;
+  padding: 10px;
+  width: min(100%, 250px);
+  box-sizing: border-box;
+}
+
+#gr_footer {
+  margin-bottom: 0;
+  height: 30px;
+}
+
+#gr_updates_widget p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+#gr_footer img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#the_iframe {
+  width: 100%;
+  height: 300px;
+  display: block;
+  border: 0;
+}
 
 .nosotros-photo-strip {
   position: relative;
@@ -999,6 +1082,7 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 #listing-product .post-contents {
@@ -1045,6 +1129,7 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
   width: 100%;
   object-fit: cover;
   height: 86px !important;
+  transition: transform .2s ease;
 }
 
 #listing-product > .list > .g-col-1:nth-child(1) .card-img-top .thumbnail-image,
@@ -1064,6 +1149,19 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+#listing-product > .list > .g-col-1:hover .quarto-grid-item,
+#listing-product > .list > .g-col-1:focus-within .quarto-grid-item {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+}
+
+#listing-product > .list > .g-col-1:hover .card-img-top img,
+#listing-product > .list > .g-col-1:hover .card-img-top .thumbnail-image,
+#listing-product > .list > .g-col-1:focus-within .card-img-top img,
+#listing-product > .list > .g-col-1:focus-within .card-img-top .thumbnail-image {
+  transform: scale(1.02);
 }
 
 #listing-product > .list > .g-col-1:nth-child(1) .listing-title {
