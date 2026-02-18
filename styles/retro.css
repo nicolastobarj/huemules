@@ -444,24 +444,37 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
 }
 
 /* Ensure page content starts below the fixed site-nav when shown */
+:root{
+  --site-nav-height: 64px;
+  --site-nav-gap: 12px;
+}
+
+@media (max-width:880px){
+  :root{ --site-nav-height: 56px; --site-nav-gap: 16px; }
+}
+
 body.show-site-nav .content-container,
 body.show-site-nav main,
 body.show-site-nav .page,
 body.show-site-nav .quarto-content,
-body.show-site-nav .content {
-  padding-top: 84px; /* nav height (64px) + small gap */
+body.show-site-nav .content,
+body.show-site-nav .quarto-page,
+body.show-site-nav article,
+body.show-site-nav .post,
+body.show-site-nav .page-wrapper,
+body.show-site-nav .document,
+body.show-site-nav .page-body,
+body.show-site-nav .page-title {
+  padding-top: calc(var(--site-nav-height) + var(--site-nav-gap));
 }
 
-/* Make anchor jumps respect the fixed header */
-html { scroll-padding-top: 84px; }
-
-@media (max-width: 880px) {
-  body.show-site-nav .content-container,
-  body.show-site-nav main,
-  body.show-site-nav .page,
-  body.show-site-nav .quarto-content,
-  body.show-site-nav .content {
-    padding-top: 72px; /* mobile nav height 56 + gap */
-  }
-  html { scroll-padding-top: 72px; }
+/* Product/title pages: keep title block below the fixed custom nav */
+body.show-site-nav #title-block-header,
+body.show-site-nav .quarto-title-block {
+  padding-top: calc(var(--site-nav-height) + var(--site-nav-gap));
 }
+
+/* Make anchor jumps and headings respect the fixed header */
+html { scroll-padding-top: calc(var(--site-nav-height) + var(--site-nav-gap)); }
+h1, h2, h3 { scroll-margin-top: calc(var(--site-nav-height) + var(--site-nav-gap) + 6px); }
+

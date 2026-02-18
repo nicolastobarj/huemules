@@ -80,11 +80,25 @@ document.addEventListener('DOMContentLoaded', function(){
   const navSearchForm = document.querySelector('.nav-search-form');
   const navSearchInput = navSearchForm ? navSearchForm.querySelector('input[type="search"]') : null;
 
+  function isInsideBanner(y){
+    const bannerThreshold = banner ? Math.max(0, banner.offsetHeight - 20) : 320;
+    return y < bannerThreshold;
+  }
+
+  let wasInsideBanner = isInsideBanner(window.scrollY || window.pageYOffset || 0);
+
   function onScroll(){
     const y = window.scrollY || window.pageYOffset;
     if(y > 40){ document.body.classList.add('hero-scrolled'); } else { document.body.classList.remove('hero-scrolled'); }
     const threshold = banner ? (banner.offsetHeight - 80) : 260;
     if(y > threshold){ document.body.classList.add('show-site-nav'); } else { document.body.classList.remove('show-site-nav'); }
+
+    const insideBanner = isInsideBanner(y);
+    if(insideBanner !== wasInsideBanner){
+      if(!insideBanner){ startFall(); }
+      else { returnLetters(); }
+      wasInsideBanner = insideBanner;
+    }
   }
 
   // split text into letter spans (idempotent)
@@ -117,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const bannerSearchBtn = document.querySelector('.banner-search-btn'); const bannerSearchForm = document.querySelector('.banner-search-form'); const bannerSearchInput = bannerSearchForm ? bannerSearchForm.querySelector('input[name="bq"]') : null; if(bannerSearchBtn && banner){ bannerSearchBtn.addEventListener('click', function(e){ e.preventDefault(); banner.classList.toggle('search-open'); if(banner.classList.contains('search-open') && bannerSearchInput) bannerSearchInput.focus(); }); } if(bannerSearchForm){ bannerSearchForm.addEventListener('submit', function(e){ e.preventDefault(); const q = (bannerSearchInput && bannerSearchInput.value || '').trim(); if(!q) return; const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li')); const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase())); if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.transition = 'box-shadow .4s ease, background .4s ease'; const origBg = found.style.background; found.style.background = 'rgba(255,255,0,0.15)'; setTimeout(()=>{ found.style.background = origBg; }, 1800); banner.classList.remove('search-open'); } else { alert('No se encontraron resultados para "' + q + '"'); } }); }
 
-  const observer = new MutationObserver(()=>{ if(document.body.classList.contains('hero-scrolled')){ startFall(); } else { returnLetters(); } }); observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>

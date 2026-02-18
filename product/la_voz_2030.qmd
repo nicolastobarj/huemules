@@ -11,10 +11,6 @@ about:
 ---
 
 ```{=html}
-<!-- Site header removed from product page to avoid duplication and listing contamination -->
-```
-
-```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   const navSearchBtn = document.querySelector('.nav-search-btn');
@@ -42,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 ```
-
 En el eterno ensayo *Autosuficiencia. La confianza en uno mismo*, Ralph Waldo Emerson quedó grabado en la memoria como el primer romántico de Norteamérica. El poeta veía la historia como un juego donde grandes personalidades tratan de tallar su espíritu en las instituciones sociales, para luego encontrar la inmortalidad al lado de las nuevas costumbres que fundaron en su pueblo. Aunque el título del ensayo da a entender que hay en su discurso una orientación hacia la autoayuda, lo cierto es que en su trabajo habitan intenciones bastante grandes, y toda palabra de aliento que expresa hacia el lector la hace apoyada en letradas referencias y un trato delicado del lenguaje.  
 
 La tesis historicista que hay detrás de este ensayo —y que me interesa recalcar— es bastante simple: que son aquellos individuos servidos de su propia fuerza de voluntad y rectitud del carácter los que tuercen la historia, y que, de algún modo, escriben las pautas de las futuras generaciones a través del carisma anidado en su forma de ser. Emerson destaca que el Derecho Romano es la encarnación jurídica de Cicerón, así como el constitucquarto previewionalismo norteamericano expandido en el mundo es la presencia omnipresente de los padres fundadores como Jefferson o Madison. Napoleón le dio a Francia una cultura imperial que aspira a la expansión, y el recién difunto José Mujica, a mi parecer, cristaliza la sabiduría naturalista de la tradición chacrera uruguaya.  
