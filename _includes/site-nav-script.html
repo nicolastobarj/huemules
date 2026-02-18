@@ -1,0 +1,23 @@
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  // If there's no home banner (we're on an inner page), show the sticky site nav by default
+  if(!document.querySelector('.home-banner')){
+    document.body.classList.add('show-site-nav');
+    const siteNav = document.querySelector('.site-nav');
+    if(siteNav) siteNav.setAttribute('aria-hidden','false');
+  }
+
+  // Minimal nav search toggle for pages that don't include the big home script
+  const navSearchBtn = document.querySelector('.nav-search-btn');
+  const siteNavInner = document.querySelector('.site-nav');
+  const navSearchForm = document.querySelector('.nav-search-form');
+  const navSearchInput = navSearchForm ? navSearchForm.querySelector('input[type="search"]') : null;
+  if(navSearchBtn && siteNavInner){
+    navSearchBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      siteNavInner.classList.toggle('search-open');
+      if(siteNavInner.classList.contains('search-open') && navSearchInput) navSearchInput.focus();
+    });
+  }
+});
+</script>

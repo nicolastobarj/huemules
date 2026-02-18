@@ -52,7 +52,7 @@ format:
     fontcolor: "#330033"
     linkcolor: "#009B86"
     monofont: "EB Garamond"
-    css: styles.css
+    css: [styles.css, styles/retro.css]
     grid:
       sidebar-width: 250px
       body-width: 900px
@@ -63,6 +63,8 @@ format:
     title-block-banner: "#FFFFFF"
     title-block-banner-color: "#2666b5"
     page-layout: full
+    include-before-body: _includes/site-nav.html
+    include-after-body: _includes/site-nav-script.html
 
 editor: source
 

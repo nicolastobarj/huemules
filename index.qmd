@@ -9,21 +9,39 @@ listing:
   - id: product
     contents: product
     type: grid
-    sort: 
+    sort:
       - "date desc"
       - "title"
     fields: [image, title, subtitle, author, date, reading-time]
-    categories: false         
-    sort-ui: false           
-    filter-ui: false         
-    page-size: 9             
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    page-size: 9
     exclude:
       category: "no_visualize"
+      limit: 4
+      wrapper: {.escritos-grid}
 ---
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 ```{=html}
 <section class="home-banner" style="background-image: url('images/banner_huemul.jpg');">
+
+  <div class="banner-vertical-socials" aria-hidden="false">
+    <a class="banner-social-vertical" href="https://www.instagram.com/" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zm6.4-3.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 9.6A2.4 2.4 0 1 1 9.6 12 2.4 2.4 0 0 1 12 9.6z"/></svg>
+    </a>
+    <a class="banner-social-vertical" href="https://www.youtube.com/" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1-2-.1-5-.1-5-.1h-.1s-3 0-5 .1c-.4 0-1.3.1-2.1 1C1.2 5.8 1 7.5 1 7.5S1 9.6 1.1 11.8v.4C1.2 15 2.6 16 3 16.5c1 .6 4.2.6 4.2.6s.4 0 2 .1c1.2.1 2.8.1 2.8.1s1.8 0 2.9-.1c1.6-.2 2-.1 2-.1s3.2 0 4.2-.6c.5-.4 1.9-1.5 1.9-4.1v-.4c.1-2.2.1-4.3.1-4.3zM9.8 14.6V9.4l5.1 2.6-5.1 2.6z"/></svg>
+    </a>
+    <a class="banner-social-vertical" href="https://www.tiktok.com/" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v11.2A4.8 4.8 0 1 1 11.2 10V7h2.8A6 6 0 1 0 20 13.8V6.4A6.2 6.2 0 0 1 16 3z"/></svg>
+    </a>
+    <button class="banner-social-vertical banner-search-btn" aria-label="Buscar en la página">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </button>
+  </div>
 
   <div class="banner-overlay">
 
@@ -42,30 +60,9 @@ listing:
       </div>
 
       <div class="top-right">
-        <div class="banner-socials">
-          <a class="banner-social" href="https://www.instagram.com/" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zm6.4-3.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 9.6A2.4 2.4 0 1 1 9.6 12 2.4 2.4 0 0 1 12 9.6z"/></svg>
-          </a>
-          <a class="banner-social" href="https://www.youtube.com/" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1-2-.1-5-.1-5-.1h-.1s-3 0-5 .1c-.4 0-1.3.1-2.1 1C1.2 5.8 1 7.5 1 7.5S1 9.6 1.1 11.8v.4C1.2 15 2.6 16 3 16.5c1 .6 4.2.6 4.2.6s.4 0 2 .1c1.2.1 2.8.1 2.8.1s1.8 0 2.9-.1c1.6-.2 2-.1 2-.1s3.2 0 4.2-.6c.5-.4 1.9-1.5 1.9-4.1v-.4c.1-2.2.1-4.3.1-4.3zM9.8 14.6V9.4l5.1 2.6-5.1 2.6z"/></svg>
-          </a>
-          <a class="banner-social" href="https://www.tiktok.com/" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v11.2A4.8 4.8 0 1 1 11.2 10V7h2.8A6 6 0 1 0 20 13.8V6.4A6.2 6.2 0 0 1 16 3z"/></svg>
-          </a>
-        </div>
-
-        <div class="banner-search">
-          <button class="banner-search-btn" aria-label="Buscar en la página">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-          </button>
-          <form class="banner-search-form" role="search">
-            <input type="search" name="bq" placeholder="Buscar en la página" aria-label="Buscar en la página">
-          </form>
-        </div>
+        <!-- intentionally left empty: banner socials and search moved to the vertical column -->
       </div>
     </div>
-
-    <!-- moved banner socials to top-right -->
 
     <h1 class="hero-title">Los Huemules</h1>
     <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
@@ -74,48 +71,6 @@ listing:
 
 </section>
 
-<header class="site-nav" aria-hidden="true">
-  <div class="site-nav-inner">
-    <div class="site-nav-leftblock">
-      <div class="site-nav-left">
-        <a class="site-brand" href="./index.html">
-          <img src="images/logo_huemul.png" alt="logo" class="site-brand-icon">Los Huemules
-        </a>
-      </div>
-
-      <nav class="site-nav-center">
-        <div class="site-links">
-          <a href="#novedades" class="site-link-btn">Escritos</a>
-          <a href="#creemos" class="site-link-btn">Manifiesto</a>
-          <a href="#somos" class="site-link-btn">Somos</a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="site-nav-right">
-      <div class="site-socials" aria-hidden="false">
-        <a class="site-social" href="https://www.instagram.com/" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zm6.4-3.4a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1zM12 9.6A2.4 2.4 0 1 1 9.6 12 2.4 2.4 0 0 1 12 9.6z"/></svg>
-        </a>
-        <a class="site-social" href="https://www.youtube.com/" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 7.5s-.2-1.7-.8-2.4c-.8-.9-1.7-.9-2.1-1-2-.1-5-.1-5-.1h-.1s-3 0-5 .1c-.4 0-1.3.1-2.1 1C1.2 5.8 1 7.5 1 7.5S1 9.6 1.1 11.8v.4C1.2 15 2.6 16 3 16.5c1 .6 4.2.6 4.2.6s.4 0 2 .1c1.2.1 2.8.1 2.8.1s1.8 0 2.9-.1c1.6-.2 2-.1 2-.1s3.2 0 4.2-.6c.5-.4 1.9-1.5 1.9-4.1v-.4c.1-2.2.1-4.3.1-4.3zM9.8 14.6V9.4l5.1 2.6-5.1 2.6z"/></svg>
-        </a>
-        <a class="site-social" href="https://www.tiktok.com/" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v11.2A4.8 4.8 0 1 1 11.2 10V7h2.8A6 6 0 1 0 20 13.8V6.4A6.2 6.2 0 0 1 16 3z"/></svg>
-        </a>
-      </div>
-
-      <div class="nav-search">
-        <button class="nav-search-btn" aria-label="Abrir búsqueda">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#006FB3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-        </button>
-        <form class="nav-search-form" role="search">
-          <input type="search" name="q" placeholder="Buscar en la página" aria-label="Buscar en la página">
-        </form>
-      </div>
-    </div>
-  </div>
-</header>
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
@@ -127,17 +82,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function onScroll(){
     const y = window.scrollY || window.pageYOffset;
-    if(y > 40){
-      document.body.classList.add('hero-scrolled');
-    } else {
-      document.body.classList.remove('hero-scrolled');
-    }
+    if(y > 40){ document.body.classList.add('hero-scrolled'); } else { document.body.classList.remove('hero-scrolled'); }
     const threshold = banner ? (banner.offsetHeight - 80) : 260;
-    if(y > threshold){
-      document.body.classList.add('show-site-nav');
-    } else {
-      document.body.classList.remove('show-site-nav');
-    }
+    if(y > threshold){ document.body.classList.add('show-site-nav'); } else { document.body.classList.remove('show-site-nav'); }
   }
 
   // split text into letter spans (idempotent)
@@ -148,12 +95,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const text = el.textContent || '';
     el.dataset.orig = text;
     el.innerHTML = '';
-    Array.from(text).forEach(ch => {
-      const sp = document.createElement('span');
-      sp.className = 'hero-letter';
-      sp.textContent = ch === ' ' ? '\u00A0' : ch;
-      el.appendChild(sp);
-    });
+    Array.from(text).forEach(ch => { const sp = document.createElement('span'); sp.className = 'hero-letter'; sp.textContent = ch === ' ' ? '\u00A0' : ch; el.appendChild(sp); });
     el.dataset.split = '1';
     return el;
   }
@@ -161,218 +103,37 @@ document.addEventListener('DOMContentLoaded', function(){
   ensureSplit('.hero-title');
   ensureSplit('.hero-subtitle');
 
-  let isFalling = false;
-  let isReturning = false;
+  let isFalling = false; let isReturning = false;
 
-  function startFall(){
-    if(isFalling) return; isFalling = true;
-    // remove any existing falling pieces
-    document.querySelectorAll('.falling-letter').forEach(n=>n.remove());
-    const targets = [document.querySelector('.hero-title'), document.querySelector('.hero-subtitle')].filter(Boolean);
-    targets.forEach((el)=>{
-      const letters = Array.from(el.querySelectorAll('.hero-letter'));
-      letters.forEach((letter,i)=>{
-        const rect = letter.getBoundingClientRect();
-        const style = window.getComputedStyle(letter);
-        const fontSize = style.fontSize || '40px';
-        const particle = document.createElement('div');
-        particle.className = 'falling-letter';
-        particle.textContent = letter.textContent;
-        particle.style.left = rect.left + 'px';
-        particle.style.top = rect.top + 'px';
-        particle.style.fontSize = fontSize;
-        particle.style.opacity = '1';
-        document.body.appendChild(particle);
-        setTimeout(()=> runPhysics(particle), i * 30 + Math.random()*40);
-      });
-      el.classList.add('hidden-letters');
-    });
-    // allow subsequent falls after animation window
-    setTimeout(()=>{ isFalling = false; }, 1200);
-  }
+  function startFall(){ if(isFalling) return; isFalling = true; document.querySelectorAll('.falling-letter').forEach(n=>n.remove()); const targets = [document.querySelector('.hero-title'), document.querySelector('.hero-subtitle')].filter(Boolean); targets.forEach((el)=>{ const letters = Array.from(el.querySelectorAll('.hero-letter')); letters.forEach((letter,i)=>{ const rect = letter.getBoundingClientRect(); const style = window.getComputedStyle(letter); const fontSize = style.fontSize || '40px'; const particle = document.createElement('div'); particle.className = 'falling-letter'; particle.textContent = letter.textContent; particle.style.left = rect.left + 'px'; particle.style.top = rect.top + 'px'; particle.style.fontSize = fontSize; particle.style.opacity = '1'; document.body.appendChild(particle); setTimeout(()=> runPhysics(particle), i * 30 + Math.random()*40); }); el.classList.add('hidden-letters'); }); setTimeout(()=>{ isFalling = false; }, 1200); }
 
-  function runPhysics(node){
-    let rect = node.getBoundingClientRect();
-    let x = rect.left;
-    let y = rect.top;
-    let vx = (Math.random() - 0.5) * 6;
-    let vy = Math.random() * 2;
-    let rot = (Math.random() - 0.5) * 30;
-    let drot = (Math.random() - 0.5) * 6;
-    const g = 0.6;
-    const decay = 0.995;
-    function step(){
-      vy += g;
-      x += vx;
-      y += vy;
-      vx *= decay;
-      rot += drot;
-      node.style.transform = `translate(${x - rect.left}px, ${y - rect.top}px) rotate(${rot}deg)`;
-      if(y > window.innerHeight - 60) {
-        node.style.opacity = String(Math.max(0, 1 - (y - (window.innerHeight - 60)) / 300));
-      }
-      if(y < window.innerHeight + 400){
-        requestAnimationFrame(step);
-      } else {
-        node.remove();
-      }
-    }
-    requestAnimationFrame(step);
-  }
+  function runPhysics(node){ let rect = node.getBoundingClientRect(); let x = rect.left; let y = rect.top; let vx = (Math.random() - 0.5) * 6; let vy = Math.random() * 2; let rot = (Math.random() - 0.5) * 30; let drot = (Math.random() - 0.5) * 6; const g = 0.6; const decay = 0.995; function step(){ vy += g; x += vx; y += vy; vx *= decay; rot += drot; node.style.transform = `translate(${x - rect.left}px, ${y - rect.top}px) rotate(${rot}deg)`; if(y > window.innerHeight - 60) { node.style.opacity = String(Math.max(0, 1 - (y - (window.innerHeight - 60)) / 300)); } if(y < window.innerHeight + 400){ requestAnimationFrame(step); } else { node.remove(); } } requestAnimationFrame(step); }
 
-  function returnLetters(){
-    if(isReturning) return; isReturning = true;
-    // remove falling pieces
-    document.querySelectorAll('.falling-letter').forEach(n=>n.remove());
-    const targets = [document.querySelector('.hero-title'), document.querySelector('.hero-subtitle')].filter(Boolean);
-    targets.forEach((el, idxEl)=>{
-      const letters = Array.from(el.querySelectorAll('.hero-letter'));
-      // make visible but set starting transform (below)
-      el.classList.remove('hidden-letters');
-      letters.forEach((letter,i)=>{
-        const dx = (Math.random()-0.5) * 40;
-        const rot = (Math.random()-0.5) * 30;
-        letter.style.transition = 'none';
-        letter.style.transform = `translateY(${300 + Math.random()*120}px) rotate(${rot}deg) translateX(${dx}px)`;
-        letter.style.opacity = '0';
-      });
-      // animate them back into place
-      requestAnimationFrame(()=>{
-        letters.forEach((letter,i)=>{
-          setTimeout(()=>{
-            letter.style.transition = '';
-            letter.style.transform = 'none';
-            letter.style.opacity = '1';
-            setTimeout(()=>{
-              letter.style.transition = '';
-              letter.style.transform = '';
-            }, 1000);
-          }, i*20 + idxEl*60);
-        });
-      });
-    });
-    setTimeout(()=>{ isReturning = false; }, 1200);
-  }
+  function returnLetters(){ if(isReturning) return; isReturning = true; document.querySelectorAll('.falling-letter').forEach(n=>n.remove()); const targets = [document.querySelector('.hero-title'), document.querySelector('.hero-subtitle')].filter(Boolean); targets.forEach((el, idxEl)=>{ const letters = Array.from(el.querySelectorAll('.hero-letter')); el.classList.remove('hidden-letters'); letters.forEach((letter,i)=>{ const dx = (Math.random()-0.5) * 40; const rot = (Math.random()-0.5) * 30; letter.style.transition = 'none'; letter.style.transform = `translateY(${300 + Math.random()*120}px) rotate(${rot}deg) translateX(${dx}px)`; letter.style.opacity = '0'; }); requestAnimationFrame(()=>{ letters.forEach((letter,i)=>{ setTimeout(()=>{ letter.style.transition = ''; letter.style.transform = 'none'; letter.style.opacity = '1'; setTimeout(()=>{ letter.style.transition = ''; letter.style.transform = ''; }, 1000); }, i*20 + idxEl*60); }); }); }); setTimeout(()=>{ isReturning = false; }, 1200); }
 
-  // Toggle small nav search form
-  if(navSearchBtn && siteNavInner){
-    navSearchBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      siteNavInner.classList.toggle('search-open');
-      if(siteNavInner.classList.contains('search-open') && navSearchInput){ navSearchInput.focus(); }
-    });
-  }
+  if(navSearchBtn && siteNavInner){ navSearchBtn.addEventListener('click', function(e){ e.preventDefault(); siteNavInner.classList.toggle('search-open'); if(siteNavInner.classList.contains('search-open') && navSearchInput){ navSearchInput.focus(); } }); }
 
-  // Basic in-page search: find first heading/paragraph containing query and scroll to it
-  if(navSearchForm){
-    navSearchForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      const q = (navSearchInput && navSearchInput.value || '').trim();
-      if(!q) return;
-      const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li'));
-      const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase()));
-      if(found){
-        found.scrollIntoView({behavior:'smooth', block:'center'});
-        found.style.transition = 'box-shadow .4s ease, background .4s ease';
-        const origBg = found.style.background;
-        found.style.background = 'rgba(255,255,0,0.15)';
-        setTimeout(()=>{ found.style.background = origBg; }, 1800);
-      } else {
-        alert('No se encontraron resultados para "' + q + '"');
-      }
-    });
-  }
+  if(navSearchForm){ navSearchForm.addEventListener('submit', function(e){ e.preventDefault(); const q = (navSearchInput && navSearchInput.value || '').trim(); if(!q) return; const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li')); const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase())); if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.transition = 'box-shadow .4s ease, background .4s ease'; const origBg = found.style.background; found.style.background = 'rgba(255,255,0,0.15)'; setTimeout(()=>{ found.style.background = origBg; }, 1800); } else { alert('No se encontraron resultados para "' + q + '"'); } }); }
 
-  // Banner search: toggle and handle in-page search (search form named bq)
-  const bannerSearchBtn = document.querySelector('.banner-search-btn');
-  const bannerSearchForm = document.querySelector('.banner-search-form');
-  const bannerSearchInput = bannerSearchForm ? bannerSearchForm.querySelector('input[name="bq"]') : null;
-  if(bannerSearchBtn && banner){
-    bannerSearchBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      banner.classList.toggle('search-open');
-      if(banner.classList.contains('search-open') && bannerSearchInput) bannerSearchInput.focus();
-    });
-  }
-  if(bannerSearchForm){
-    bannerSearchForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      const q = (bannerSearchInput && bannerSearchInput.value || '').trim();
-      if(!q) return;
-      const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li'));
-      const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase()));
-      if(found){
-        found.scrollIntoView({behavior:'smooth', block:'center'});
-        found.style.transition = 'box-shadow .4s ease, background .4s ease';
-        const origBg = found.style.background;
-        found.style.background = 'rgba(255,255,0,0.15)';
-        setTimeout(()=>{ found.style.background = origBg; }, 1800);
-        // close banner search
-        banner.classList.remove('search-open');
-      } else {
-        alert('No se encontraron resultados para "' + q + '"');
-      }
-    });
-  }
+  const bannerSearchBtn = document.querySelector('.banner-search-btn'); const bannerSearchForm = document.querySelector('.banner-search-form'); const bannerSearchInput = bannerSearchForm ? bannerSearchForm.querySelector('input[name="bq"]') : null; if(bannerSearchBtn && banner){ bannerSearchBtn.addEventListener('click', function(e){ e.preventDefault(); banner.classList.toggle('search-open'); if(banner.classList.contains('search-open') && bannerSearchInput) bannerSearchInput.focus(); }); } if(bannerSearchForm){ bannerSearchForm.addEventListener('submit', function(e){ e.preventDefault(); const q = (bannerSearchInput && bannerSearchInput.value || '').trim(); if(!q) return; const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li')); const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase())); if(found){ found.scrollIntoView({behavior:'smooth', block:'center'}); found.style.transition = 'box-shadow .4s ease, background .4s ease'; const origBg = found.style.background; found.style.background = 'rgba(255,255,0,0.15)'; setTimeout(()=>{ found.style.background = origBg; }, 1800); banner.classList.remove('search-open'); } else { alert('No se encontraron resultados para "' + q + '"'); } }); }
 
-  // observe hero-scrolled class to trigger fall / return
-  const observer = new MutationObserver(()=>{
-    if(document.body.classList.contains('hero-scrolled')){ startFall(); }
-    else { returnLetters(); }
-  });
-  observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+  const observer = new MutationObserver(()=>{ if(document.body.classList.contains('hero-scrolled')){ startFall(); } else { returnLetters(); } }); observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>
 ```
 
 ::: {.content-container}
+
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
-# Escritos
-<hr style="border-top: 2px solid #000000ff; opacity: 1;">
-<section id="escritos-listing" class="escritos-grid" aria-label="Escritos destacados">
 
-  <div class="escritos-left">
-    <a class="escrito-large" href="product/la_voz_2030.html">
-      <img src="images/escudo_huemul.jpg" alt="La Voz 2030" />
-      <div class="escrito-meta">
-        <div class="escrito-tag">PODCAST</div>
-        <h3 class="escrito-title">Why No One Wants to Be a Manager Anymore with Ginny Clarke</h3>
-        <p class="escrito-sub">Una conversación sobre las tensiones de la gestión moderna y la cultura laboral.</p>
-      </div>
-    </a>
-  </div>
+# Escritos recientes
+<hr style="border-top: 2px solid #330033; opacity: 1;">
 
-  <aside class="escritos-right">
-    <a class="escrito-small" href="product/por_subir_1.html">
-      <img src="images/logo_huemul.png" alt="Por subir">
-      <div class="escrito-small-meta">
-        <h4>Por subir</h4>
-        <p class="muted">Pronto más contenido</p>
-      </div>
-    </a>
+::: {#product}
 
-    <a class="escrito-small" href="product/por_subir_2.html">
-      <img src="images/logo_huemul.png" alt="Por subir">
-      <div class="escrito-small-meta">
-        <h4>Por subir</h4>
-        <p class="muted">Pronto más contenido</p>
-      </div>
-    </a>
+:::
 
-    <a class="escrito-small" href="product/por_subir_3.html">
-      <img src="images/logo_huemul.png" alt="Por subir">
-      <div class="escrito-small-meta">
-        <h4>Por subir</h4>
-        <p class="muted">Pronto más contenido</p>
-      </div>
-    </a>
-
-  </aside>
-
-</section>
 
 <div id="creemos" style="padding-top: 60px; margin-top: -40px;"></div>
 # ¿En qué creemos?
@@ -388,27 +149,25 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <ol class="manifiesto-text">
   <li>Reconocemos la oscilación como el orden natural del mundo.</li>
-
   <li>Debemos liberarnos de la inercia resultante de un siglo de ingenuidad modernista ideológica y de la falta de sinceridad cínica de su antónimo, hijo bastardo.</li>
-
   <li>El movimiento hacia adelante se habilita por medio de una oscilación entre posiciones con ideas diametralmente opuestas, que operan como las polaridades pulsantes de una máquina eléctrica colosal, propulsando el mundo en acción.</li>
-
   <li>Somos conscientes de las limitaciones inherentes a todo movimiento y experiencia, y de la futilidad de cualquier intento por trascenderlas. La incompletitud esencial de un sistema no exige sumisión, sino una adhesión orientada a vislumbrar una exterioridad posible. La existencia se enriquece cuando actuamos como si esos límites pudieran ser excedidos.</li>
-
   <li>Todas las cosas están atrapadas en una diapositiva irrevocable hacia un estado de entropía máxima disimulada. La creación artística es contingente a la revelación de la diferencia en sí misma. En su cénit, el arte es experiencia inmediata de la diferencia.</li>
-
   <li>El presente es un síntoma del nacimiento gemelo de la inmediatez y la obsolescencia. Las nuevas tecnologías permiten la experiencia simultánea de los hechos desde una multiplicidad de posiciones, facilitando la democratización de la historia.</li>
-
   <li>Así como la ciencia busca la elegancia poética, el arte puede asumir la búsqueda de la verdad. Toda información es base de conocimiento, empírica o aforística. Debemos abrazar una síntesis científico-poética. El error genera sentido.</li>
-
   <li>Se propone un romanticismo pragmático sin anclajes ideológicos. El metamodernismo es la condición mercurial que existe entre, más allá y en la búsqueda de múltiples horizontes fragmentarios. Debemos seguir adelante y oscilar.</li>
 </ol>
 :::
 
-
+```{=html}
 <div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
+```
+
 # ¿Quiénes somos?
+
+```{=html}
 <hr style="border-top: 2px solid #000000ff; opacity: 1;">
+```
 
 ```{=html}
 <section class="home-section">
@@ -433,11 +192,6 @@ document.addEventListener('DOMContentLoaded', function(){
       colectiva en tiempos de incertidumbre.
     </p>
   </div>
-  
 </div>
-
-
 </section>
 ```
-
-![Profile views](https://counter.kuber.studio/nicolastobarj/light/count.svg)
