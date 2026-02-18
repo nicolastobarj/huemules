@@ -378,6 +378,47 @@ a:hover { color: var(--retro-red); }
   border-radius: 12px;
 }
 
+.inspiraciones-section {
+  margin-top: 26px;
+}
+
+.inspiraciones-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inspiraciones-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inspiracion-card {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-bottom: 0;
+}
+
+.inspiracion-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: none;
+}
+
+.inspiraciones-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--retro-blue);
+  font-size: clamp(1.3rem, 2.1vw, 2rem);
+  text-align: left;
+}
+
 @media (max-width: 1060px) {
   .manifiesto-columns {
     grid-template-columns: 1fr;
@@ -387,11 +428,41 @@ a:hover { color: var(--retro-red); }
   .manifiesto-playlist iframe {
     min-height: 420px;
   }
+
+  .inspiraciones-layout {
+    gap: 12px;
+  }
+
+  .inspiraciones-title {
+    text-align: center;
+  }
 }
 
 @media (max-width: 880px) {
+  .manifiesto-wrapper {
+    max-width: 100% !important;
+    margin: 1rem 0 1.5rem !important;
+    padding: 0 !important;
+  }
+
+  .manifiesto-columns {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .manifiesto-main {
+    width: 100%;
+    order: 1;
+  }
+
+  .manifiesto-playlist {
+    width: 100%;
+    order: 2;
+  }
+
   .manifiesto-playlist iframe {
-    min-height: 420px;
+    height: 232px !important;
+    min-height: 232px !important;
   }
 }
 

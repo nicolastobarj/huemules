@@ -230,7 +230,7 @@ window.Quarto = {
 
         <div class="site-links">
 
-          <a href="./escritos.html" class="site-link-btn">Escritos</a>
+          <a href="./escritos.html" class="site-link-btn">Blog</a>
 
           <a href="./#creemos" class="site-link-btn">Manifiesto</a>
 
@@ -325,7 +325,7 @@ window.Quarto = {
       </div>
 
       <div class="top-center">
-        <a href="./escritos.html" class="banner-btn">Escritos</a>
+        <a href="./escritos.html" class="banner-btn">Blog</a>
         <a href="#somos" class="banner-btn">Somos</a>
         <a href="#creemos" class="banner-btn">Manifiesto</a>
       </div>
@@ -421,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <img loading="lazy" src="./images/la_voz_2030.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<h5 class="no-anchor card-title listing-title" data-anchor-id="últimas-publicaciones">
 Jorge González y La voz del 2030
 </h5>
 <div class="card-subtitle listing-subtitle">
@@ -538,11 +538,41 @@ No hay resultados
 </div>
 </div>
 <div class="all-posts-cta">
-  <a href="./escritos.html" class="banner-btn">Todas las publicaciones</a>
+  <a href="./escritos.html" class="banner-btn">Ver blog completo</a>
 </div>
+<div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
+</section>
+<section id="quiénes-somos" class="level1">
+<h1>¿Quiénes somos?</h1>
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
+<section class="home-section">
+
+  <div class="hero-left">
+    <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
+    <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+  </div>
+
+  <div class="hero-divider"></div>
+
+<div class="hero-right">
+  <div class="proyecto-texto">
+    <p>
+      Somos jóvenes desamparados que, ante un mundo en crisis y en constante transformación,
+      nos hemos reunido a conversar sobre el qué hacer con nuestro país.
+    </p>
+
+    <p>
+      Queremos transmitir a las nuevas generaciones la voluntad y las ganas de llevar a cabo
+      proyectos capaces de levantar el espíritu de Chile, articulando reflexión, crítica y acción
+      colectiva en tiempos de incertidumbre.
+    </p>
+  </div>
+</div>
+</section>
 <div id="creemos" style="padding-top: 60px; margin-top: -40px;">
 
 </div>
+</section>
 <section id="en-qué-creemos" class="level1">
 <h1>¿En qué creemos?</h1>
 <hr style="border-top: 2px solid #000000ff; opacity: 1;">
@@ -580,7 +610,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function syncPlaylistHeight() {
     if (window.innerWidth <= 880) {
-      spotify.style.height = '420px';
+      spotify.style.height = '232px';
       return;
     }
     const targetHeight = Math.max(mainCol.offsetHeight, 420);
@@ -593,34 +623,18 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', syncPlaylistHeight);
 });
 </script>
-<div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
-</section>
-<section id="quiénes-somos" class="level1">
-<h1>¿Quiénes somos?</h1>
-<hr style="border-top: 2px solid #000000ff; opacity: 1;">
-<section class="home-section">
-
-  <div class="hero-left">
-    <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
-    <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+<section class="inspiraciones-section" aria-label="Nuestras inspiraciones">
+  <div class="inspiraciones-layout">
+    <h3 class="inspiraciones-title">Algunas de nuestras inspiraciones</h3>
+    <div class="inspiraciones-links">
+      <a class="inspiracion-card" href="https://teoriasocialhoy.org/" target="_blank" rel="noopener noreferrer" aria-label="Teoría Social Hoy">
+        <img src="images/teoria_social_hoy.jpg" alt="Teoría Social Hoy">
+      </a>
+      <a class="inspiracion-card" href="https://www.metamodernism.org/" target="_blank" rel="noopener noreferrer" aria-label="Metamodernism">
+        <img src="images/metamodernist_banner.jpeg" alt="Metamodernism">
+      </a>
+    </div>
   </div>
-
-  <div class="hero-divider"></div>
-
-<div class="hero-right">
-  <div class="proyecto-texto">
-    <p>
-      Somos jóvenes desamparados que, ante un mundo en crisis y en constante transformación,
-      nos hemos reunido a conversar sobre el qué hacer con nuestro país.
-    </p>
-
-    <p>
-      Queremos transmitir a las nuevas generaciones la voluntad y las ganas de llevar a cabo
-      proyectos capaces de levantar el espíritu de Chile, articulando reflexión, crítica y acción
-      colectiva en tiempos de incertidumbre.
-    </p>
-  </div>
-</div>
 </section>
 <section id="galeria" class="home-gallery">
   <h1>Para representar nuestro pensamiento...</h1>
@@ -640,7 +654,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <section id="contacto" class="contact-parallax" style="background-image: url('images/huemul_mail.jpg');">
   <div class="contact-overlay"></div>
   <div class="contact-content">
-    <h2 class="contact-title" data-anchor-id="quiénes-somos">¿Quieres hablar con nosotros? Contáctanos</h2>
+    <h2 class="contact-title" data-anchor-id="en-qué-creemos">¿Quieres hablar con nosotros? Contáctanos</h2>
     <div class="contact-divider"></div>
 
     <form class="contact-form" action="https://formsubmit.co/mutualhuemules@gmail.com" method="POST">
@@ -665,11 +679,9 @@ document.addEventListener('DOMContentLoaded', function () {
     </form>
   </div>
 </section>
-<p>:::</p>
 
 
 
-</section>
 </section></div>
 
 

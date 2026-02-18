@@ -152,6 +152,43 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 ```
 
+```{=html}
+<div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
+```
+
+# ¿Quiénes somos?
+
+```{=html}
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
+```
+
+```{=html}
+<section class="home-section">
+
+  <div class="hero-left">
+    <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
+    <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+  </div>
+
+  <div class="hero-divider"></div>
+
+<div class="hero-right">
+  <div class="proyecto-texto">
+    <p>
+      Somos jóvenes desamparados que, ante un mundo en crisis y en constante transformación,
+      nos hemos reunido a conversar sobre el qué hacer con nuestro país.
+    </p>
+
+    <p>
+      Queremos transmitir a las nuevas generaciones la voluntad y las ganas de llevar a cabo
+      proyectos capaces de levantar el espíritu de Chile, articulando reflexión, crítica y acción
+      colectiva en tiempos de incertidumbre.
+    </p>
+  </div>
+</div>
+</section>
+```
+
 
 <div id="creemos" style="padding-top: 60px; margin-top: -40px;"></div>
 # ¿En qué creemos?
@@ -197,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function syncPlaylistHeight() {
     if (window.innerWidth <= 880) {
-      spotify.style.height = '420px';
+      spotify.style.height = '232px';
       return;
     }
     const targetHeight = Math.max(mainCol.offsetHeight, 420);
@@ -213,39 +250,18 @@ document.addEventListener('DOMContentLoaded', function () {
 ```
 
 ```{=html}
-<div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
-```
-
-# ¿Quiénes somos?
-
-```{=html}
-<hr style="border-top: 2px solid #000000ff; opacity: 1;">
-```
-
-```{=html}
-<section class="home-section">
-
-  <div class="hero-left">
-    <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
-    <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
+<section class="inspiraciones-section" aria-label="Nuestras inspiraciones">
+  <div class="inspiraciones-layout">
+    <h3 class="inspiraciones-title">Algunas de nuestras inspiraciones</h3>
+    <div class="inspiraciones-links">
+      <a class="inspiracion-card" href="https://teoriasocialhoy.org/" target="_blank" rel="noopener noreferrer" aria-label="Teoría Social Hoy">
+        <img src="images/teoria_social_hoy.jpg" alt="Teoría Social Hoy">
+      </a>
+      <a class="inspiracion-card" href="https://www.metamodernism.org/" target="_blank" rel="noopener noreferrer" aria-label="Metamodernism">
+        <img src="images/metamodernist_banner.jpeg" alt="Metamodernism">
+      </a>
+    </div>
   </div>
-
-  <div class="hero-divider"></div>
-
-<div class="hero-right">
-  <div class="proyecto-texto">
-    <p>
-      Somos jóvenes desamparados que, ante un mundo en crisis y en constante transformación,
-      nos hemos reunido a conversar sobre el qué hacer con nuestro país.
-    </p>
-
-    <p>
-      Queremos transmitir a las nuevas generaciones la voluntad y las ganas de llevar a cabo
-      proyectos capaces de levantar el espíritu de Chile, articulando reflexión, crítica y acción
-      colectiva en tiempos de incertidumbre.
-    </p>
-  </div>
-</div>
 </section>
 ```
 
@@ -297,5 +313,3 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </section>
 ```
-
-:::
