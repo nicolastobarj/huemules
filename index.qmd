@@ -273,15 +273,87 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <div class="museum-gallery">
     <figure class="museum-frame">
-      <img src="images/igualdad_pinguinos.jpg" alt="Igualdad pingüinos">
+      <button class="museum-photo" type="button" data-full-image="images/igualdad_pinguinos.jpg" data-alt="Igualdad pingüinos" data-caption="Igualdad entre Pingüinos de Humboldt" aria-label="Ver imagen completa: Igualdad entre Pingüinos de Humboldt">
+        <img src="images/igualdad_pinguinos.jpg" alt="Igualdad pingüinos" loading="lazy">
+      </button>
       <figcaption>Igualdad entre Pingüinos de Humboldt</figcaption>
     </figure>
     <figure class="museum-frame">
-        <img src="images/soy_ese_penguin.jpg" alt="¡Soy ese!">
+      <button class="museum-photo" type="button" data-full-image="images/soy_ese_penguin.jpg" data-alt="¡Soy ese!" data-caption="¡Soy ese!" aria-label="Ver imagen completa: ¡Soy ese!">
+        <img src="images/soy_ese_penguin.jpg" alt="¡Soy ese!" loading="lazy">
+      </button>
         <figcaption>¡Soy ese!</figcaption>
     </figure>
+    <figure class="museum-frame">
+      <button class="museum-photo" type="button" data-full-image="images/no_trabajar.jpg" data-alt="No queremos trabajar" data-caption="Yo, no quiero trabajar" aria-label="Ver imagen completa: Yo, no quiero trabajar">
+        <img src="images/no_trabajar.jpg" alt="No queremos trabajar" loading="lazy">
+      </button>
+        <figcaption>Yo, no quiero trabajar</figcaption>
+    </figure>  
+    <figure class="museum-frame">
+      <button class="museum-photo" type="button" data-full-image="images/kant_mcc.jpg" data-alt="Filosofía en Chile" data-caption="Se puede hacer Filosofía en Chile" aria-label="Ver imagen completa: Se puede hacer Filosofía en Chile">
+        <img src="images/kant_mcc.jpg" alt="Filosofía en Chile" loading="lazy">
+      </button>
+        <figcaption>Se puede hacer Filosofía en Chile</figcaption>
+    </figure>  
+    <figure class="museum-frame">
+      <button class="museum-photo" type="button" data-full-image="images/candelabro_kast.jpg" data-alt="Candelabro Kast" data-caption="Queremos ser los Candelabro de la sociología" aria-label="Ver imagen completa: Queremos ser los Candelabro de la sociología">
+        <img src="images/candelabro_kast.jpg" alt="Candelabro Kast" loading="lazy">
+      </button>
+        <figcaption>Queremos ser los Candelabro de la sociología</figcaption>
+    </figure>  
   </div>
 </section>
+```
+
+```{=html}
+<dialog id="gallery-lightbox" class="gallery-lightbox" aria-label="Visor de imagen completa">
+  <button type="button" class="gallery-lightbox-close" aria-label="Cerrar imagen">×</button>
+  <img src="" alt="" class="gallery-lightbox-image">
+  <p class="gallery-lightbox-caption"></p>
+</dialog>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (!lightbox) return;
+
+  const lightboxImage = lightbox.querySelector('.gallery-lightbox-image');
+  const lightboxCaption = lightbox.querySelector('.gallery-lightbox-caption');
+  const closeButton = lightbox.querySelector('.gallery-lightbox-close');
+
+  function closeLightbox() {
+    if (typeof lightbox.close === 'function' && lightbox.open) {
+      lightbox.close();
+    }
+  }
+
+  document.querySelectorAll('.museum-photo').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const src = trigger.dataset.fullImage;
+      if (!src) return;
+
+      lightboxImage.src = src;
+      lightboxImage.alt = trigger.dataset.alt || 'Imagen de galería';
+      lightboxCaption.textContent = trigger.dataset.caption || '';
+
+      if (typeof lightbox.showModal === 'function') {
+        lightbox.showModal();
+      } else {
+        window.open(src, '_blank', 'noopener');
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', function (event) {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+});
+</script>
 ```
 
 ```{=html}
