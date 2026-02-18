@@ -291,29 +291,91 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-  // Minimal nav search toggle for pages that don't include the big home script
+  function findAndHighlight(q){
 
-  const navSearchBtn = document.querySelector('.nav-search-btn');
+    const nodes = Array.from(document.querySelectorAll('h1,h2,h3,h4,p,li'));
 
-  const siteNavInner = document.querySelector('.site-nav');
+    const found = nodes.find(n => n.textContent && n.textContent.toLowerCase().includes(q.toLowerCase()));
 
-  const navSearchForm = document.querySelector('.nav-search-form');
+    if(!found) return false;
 
-  const navSearchInput = navSearchForm ? navSearchForm.querySelector('input[type="search"]') : null;
+    found.scrollIntoView({behavior:'smooth', block:'center'});
 
-  if(navSearchBtn && siteNavInner){
+    found.style.transition = 'box-shadow .4s ease, background .4s ease';
 
-    navSearchBtn.addEventListener('click', function(e){
+    const originalBg = found.style.background;
+
+    found.style.background = 'rgba(255,255,0,0.15)';
+
+    setTimeout(function(){ found.style.background = originalBg; }, 1800);
+
+    return true;
+
+  }
+
+
+
+  function bindSearch(buttonSelector, containerSelector, formSelector, inputSelector){
+
+    const button = document.querySelector(buttonSelector);
+
+    const container = document.querySelector(containerSelector);
+
+    const form = document.querySelector(formSelector);
+
+    const input = form ? form.querySelector(inputSelector) : null;
+
+    if(!button || !container || !form || !input) return;
+
+    if(button.dataset.searchBound === '1') return;
+
+
+
+    button.dataset.searchBound = '1';
+
+
+
+    button.addEventListener('click', function(e){
 
       e.preventDefault();
 
-      siteNavInner.classList.toggle('search-open');
+      container.classList.toggle('search-open');
 
-      if(siteNavInner.classList.contains('search-open') && navSearchInput) navSearchInput.focus();
+      if(container.classList.contains('search-open')) input.focus();
+
+    });
+
+
+
+    form.addEventListener('submit', function(e){
+
+      e.preventDefault();
+
+      const q = (input.value || '').trim();
+
+      if(!q) return;
+
+      const ok = findAndHighlight(q);
+
+      if(!ok){
+
+        alert('No se encontraron resultados para "' + q + '"');
+
+        return;
+
+      }
+
+      container.classList.remove('search-open');
 
     });
 
   }
+
+
+
+  bindSearch('.nav-search-btn', '.site-nav', '.nav-search-form', 'input[type="search"]');
+
+  bindSearch('.banner-search-btn', '.home-banner', '.banner-search-form', 'input[name="bq"]');
 
 });
 
