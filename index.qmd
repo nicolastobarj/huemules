@@ -134,16 +134,23 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 ```
 
-::: {.content-container}
+```{=html}
+<div class="content-container">
+```
 
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
 
-# Escritos recientes
+# Últimas publicaciones
 <hr style="border-top: 2px solid #330033; opacity: 1;">
 
 ::: {#product}
-
 :::
+
+```{=html}
+<div class="all-posts-cta">
+  <a href="./escritos.html" class="banner-btn">Todas las publicaciones</a>
+</div>
+```
 
 
 <div id="creemos" style="padding-top: 60px; margin-top: -40px;"></div>
@@ -151,7 +158,9 @@ document.addEventListener('DOMContentLoaded', function(){
 <hr style="border-top: 2px solid #000000ff; opacity: 1;">
 
 ::: {.manifiesto-wrapper}
-
+<div class="manifiesto-columns">
+  <div class="manifiesto-main">
+```{=html}
 <div class="manifiesto-logo">
   <img src="images/logo_huemul.png" alt="Logo Huemules">
 </div>
@@ -168,7 +177,40 @@ document.addEventListener('DOMContentLoaded', function(){
   <li>Así como la ciencia busca la elegancia poética, el arte puede asumir la búsqueda de la verdad. Toda información es base de conocimiento, empírica o aforística. Debemos abrazar una síntesis científico-poética. El error genera sentido.</li>
   <li>Se propone un romanticismo pragmático sin anclajes ideológicos. El metamodernismo es la condición mercurial que existe entre, más allá y en la búsqueda de múltiples horizontes fragmentarios. Debemos seguir adelante y oscilar.</li>
 </ol>
-:::
+```
+  </div>
+
+  <aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
+    <iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </aside>
+</div>
+```{=html}
+</div>
+```
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mainCol = document.querySelector('.manifiesto-main');
+  const spotify = document.getElementById('manifiesto-spotify');
+  if (!mainCol || !spotify) return;
+
+  function syncPlaylistHeight() {
+    if (window.innerWidth <= 880) {
+      spotify.style.height = '420px';
+      return;
+    }
+    const targetHeight = Math.max(mainCol.offsetHeight, 420);
+    spotify.style.height = targetHeight + 'px';
+  }
+
+  syncPlaylistHeight();
+  setTimeout(syncPlaylistHeight, 250);
+  window.addEventListener('resize', syncPlaylistHeight);
+  window.addEventListener('load', syncPlaylistHeight);
+});
+</script>
+```
 
 ```{=html}
 <div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
@@ -224,3 +266,36 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 </section>
 ```
+
+```{=html}
+<section id="contacto" class="contact-parallax" style="background-image: url('images/huemul_mail.jpg');">
+  <div class="contact-overlay"></div>
+  <div class="contact-content">
+    <h2 class="contact-title">¿Quieres hablar con nosotros? Contáctanos</h2>
+    <div class="contact-divider"></div>
+
+    <form class="contact-form" action="https://formsubmit.co/mutualhuemules@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde Mutual Los Huemules">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="contact-row">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+      </div>
+      <div class="contact-row">
+        <input type="email" name="email" placeholder="Tu correo" required>
+      </div>
+      <div class="contact-row">
+        <input type="text" name="asunto" placeholder="Asunto" required>
+      </div>
+      <div class="contact-row">
+        <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-submit">Enviar mensaje</button>
+    </form>
+  </div>
+</section>
+```
+
+:::

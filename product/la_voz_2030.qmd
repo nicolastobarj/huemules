@@ -1,6 +1,6 @@
 ---
 title: "Jorge González y La voz del 2030"
-subtitle: "Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes a la hora de conformar algo grande"
+subtitle: "Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes para sostener algo grande al día de hoy"
 author: "Nicolás Tobar Jorquera"
 date: 02-01-2026
 image: ../images/la_voz_2030.png
