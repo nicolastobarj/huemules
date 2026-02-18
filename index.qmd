@@ -163,10 +163,10 @@ document.addEventListener('DOMContentLoaded', function(){
     <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
     <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
     <hr class="hero-left-divider">
-    <h3 class="lecturas-title">Estas son nuestras últimas lecturas :)</h3>
-    <div id="gr_updates_widget">
-      <iframe id="the_iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&num_updates=5&user=144700241&width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
-      <div id="gr_footer">
+    <h3 class="lecturas-title lecturas-title-desktop">Estas son nuestras últimas lecturas :)</h3>
+    <div class="goodreads-widget goodreads-widget-desktop">
+      <iframe class="goodreads-iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&num_updates=5&user=144700241&width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
+      <div class="goodreads-footer">
         <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
       </div>
     </div>
@@ -188,6 +188,15 @@ document.addEventListener('DOMContentLoaded', function(){
     </p>
   </div>
 </div>
+
+  <hr class="hero-mobile-divider">
+  <h3 class="lecturas-title lecturas-title-mobile">Estas son nuestras últimas lecturas :)</h3>
+  <div class="goodreads-widget goodreads-widget-mobile">
+    <iframe class="goodreads-iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&num_updates=5&user=144700241&width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
+    <div class="goodreads-footer">
+      <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
+    </div>
+  </div>
 </section>
 ```
 
@@ -229,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 
   <aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
-    <h3 class="manifiesto-playlist-title">Música que nos ayuda a seguir creyendo en la vida (y ennuestro país)</h3>
+    <h3 class="manifiesto-playlist-title">Música que expresa nuestras convicciones</h3>
     <iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </aside>
 </div>
