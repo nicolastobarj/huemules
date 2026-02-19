@@ -504,7 +504,7 @@ a:hover { color: var(--retro-red); }
 .hero-divider { width: 2px; background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.01)); margin: 0 12px; }
 
 .hero-left-divider {
-  width: min(100%, 250px);
+  width: min(100%, 300px);
   border: 0;
   border-top: 2px solid #683205;
   margin: 0.35rem auto 0.75rem;
@@ -520,6 +520,18 @@ a:hover { color: var(--retro-red); }
   font-style: italic;
 }
 
+.lecturas-title-desktop {
+  width: min(100%, 300px);
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
+  top: 88px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(1px);
+  padding: 0.2rem 0.15rem;
+}
+
 .hero-mobile-divider,
 .lecturas-title-mobile,
 .goodreads-widget-mobile {
@@ -528,18 +540,30 @@ a:hover { color: var(--retro-red); }
 
 .goodreads-widget {
   margin: 0.8rem auto 0;
-  border-radius: 5px;
-  background-color:#fff;
-  border:solid #683205 10px;
-  -webkit-box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  -moz-box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  box-shadow: 0px 0px 4px 1px #595959,
-  inset 0px 0px 0px 1px #7D730B;
-  padding: 10px;
-  width: min(100%, 250px);
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+  width: min(100%, 300px);
   box-sizing: border-box;
+}
+
+.goodreads-widget > [id^="gr_custom_widget_"] {
+  display: flex;
+  justify-content: center;
+}
+
+.goodreads-widget [class*="gr_custom_container_"] {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.goodreads-widget [class*="gr_custom_review_"] {
+  display: none;
 }
 
 .goodreads-footer {
@@ -574,7 +598,7 @@ a:hover { color: var(--retro-red); }
 
   .hero-mobile-divider {
     display: block;
-    width: min(100%, 250px);
+    width: min(100%, 300px);
     border: 0;
     border-top: 2px solid #683205;
     margin: 0.55rem auto 0.75rem;
@@ -584,6 +608,47 @@ a:hover { color: var(--retro-red); }
   .lecturas-title-mobile,
   .goodreads-widget-mobile {
     display: block;
+  }
+
+  .lecturas-title-mobile,
+  .goodreads-widget-mobile {
+    width: min(100%, 300px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .goodreads-widget-mobile [class*="gr_custom_container_"] {
+    width: 100% !important;
+    padding: 8px 6px !important;
+  }
+
+  .goodreads-widget-mobile [class*="gr_custom_book_container_"] {
+    width: 82px !important;
+    height: 132px !important;
+    margin-right: 8px !important;
+  }
+
+  .goodreads-widget-mobile [class*="gr_custom_each_container_"] {
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
+  }
+
+  .goodreads-widget-mobile [class*="gr_custom_title_"] a {
+    display: block;
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .goodreads-widget-mobile [class*="gr_custom_author_"] {
+    font-size: 0.75rem !important;
+    line-height: 1.2;
+  }
+
+  .lecturas-title-desktop {
+    position: static;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
   }
 }
 

@@ -163,12 +163,148 @@ document.addEventListener('DOMContentLoaded', function(){
     <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
     <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
     <hr class="hero-left-divider">
-    <h3 class="lecturas-title lecturas-title-desktop">Estas son nuestras últimas lecturas :)</h3>
+    <h3 class="lecturas-title lecturas-title-desktop">Te compartimos las reseñas de nuestras últimas lecturas. Si te interesa alguna, haz click en la portada del libro.</h3>
     <div class="goodreads-widget goodreads-widget-desktop">
-      <iframe class="goodreads-iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&num_updates=5&user=144700241&width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
-      <div class="goodreads-footer">
-        <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
+      <style type="text/css" media="screen">
+  .gr_custom_container_1771465470 {
+    border: 4px solid gray;
+    border-radius:10px;
+    padding: 10px 5px 10px 5px;
+    background-color: transparent;
+    color: #000000;
+    width: 300px
+  }
+  .gr_custom_header_1771465470 {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 80%
+  }
+  .gr_custom_each_container_1771465470 {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+  }
+  .gr_custom_book_container_1771465470 {
+    overflow: hidden;
+    height: 160px;
+      float: left;
+      margin-right: 4px;
+      width: 98px;
+  }
+  .gr_custom_author_1771465470 {
+    font-size: 10px;
+  }
+  .gr_custom_tags_1771465470 {
+    font-size: 10px;
+    color: gray;
+  }
+  .gr_custom_rating_1771465470 {
+    float: right;
+  }
+</style>
+
+      <div id="gr_custom_widget_1771465470">
+          <div class="gr_custom_container_1771465470">
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="El informe: Trabajo intelectual y tristeza burocrática" rel="nofollow" href="https://www.goodreads.com/review/show/8371469483?utm_medium=api&amp;utm_source=custom_widget"><img alt="El informe: Trabajo intelectual y tristeza burocrática" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717749643l/211111711._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371469483?utm_medium=api&amp;utm_source=custom_widget">El informe: Trabajo intelectual y tristeza burocrática</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7066416.Remedios_Zafra">Remedios Zafra</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            En El Informe, Remedios Zafra no convence desde el argumento abstracto ni desde la lógica analítica, sino a partir de su propia experiencia. En este libro te cuenta quién es, y toda letra que conecta captura aquellos inefables sufrimient...
+          </div>
       </div>
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="Sudamerican Rocker: Un retrato de Jorge González" rel="nofollow" href="https://www.goodreads.com/review/show/8371465924?utm_medium=api&amp;utm_source=custom_widget"><img alt="Sudamerican Rocker: Un retrato de Jorge González" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1761396943l/243183316._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371465924?utm_medium=api&amp;utm_source=custom_widget">Sudamerican Rocker: Un retrato de Jorge González</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7092170.Juan_Crist_bal_Pe_a">Juan Cristóbal Peña</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            Existe material de sobra para rastrear la figura de Jorge González y su genial impacto en la cultura popular chilena. Mediante su vida se cuenta no sólo la vida de una estrella de rock, sino también la realidad de un país, su evolución y...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="Infocracia: La digitalización y la crisis de la democracia" rel="nofollow" href="https://www.goodreads.com/review/show/8371452448?utm_medium=api&amp;utm_source=custom_widget"><img alt="Infocracia: La digitalización y la crisis de la democracia" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1649430891l/60774041._SY160_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371452448?utm_medium=api&amp;utm_source=custom_widget">Infocracia: La digitalización y la crisis de la democracia</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/970747.Byung_Chul_Han">Byung-Chul Han</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            Leer a Byung-Chul Han no se ve bien entre los círculos más doctos de la teoría social. Se le critica por la falta de rigurosidad de sus ideas, así como por la vocación comercial que demuestra al reverberar ideas en libros cortos que le p...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="Ser en el Sur (Spanish Edition)" rel="nofollow" href="https://www.goodreads.com/review/show/8371447972?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ser en el Sur" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439758366l/26111841._SY160_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371447972?utm_medium=api&amp;utm_source=custom_widget">Ser en el Sur</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/125726.Volodia_Teitelboim">Volodia Teitelboim</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            Pertenezco a una generación de chilenos que no ha tenido grandes momentos de gloria de la que gozaron las anteriores. A mis breves 25 años he visto el desmoronamiento de un proyecto histórico de largo aliento, que se supone venía a cerra...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory (Elements in Politics and Society in Latin America)" rel="nofollow" href="https://www.goodreads.com/review/show/8371441316?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659428426l/61608104._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371441316?utm_medium=api&amp;utm_source=custom_widget">The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/5204673.Kathya_Araujo">Kathya Araujo</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            En Chile fue publicada una re-edición de este libro al español titulada &quot;El circuito del desapego. Neoliberalismo, democratización y lazo social&quot;, por Polvora Editorial. De seguro el carácter independiente y de pequeña escala ha hecho qu...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465470">
+          <div class="gr_custom_book_container_1771465470">
+            <a title="Exijo ser un héroe: La historia de Los Prisioneros (Spanish Edition)" rel="nofollow" href="https://www.goodreads.com/review/show/8371421181?utm_medium=api&amp;utm_source=custom_widget"><img alt="Exijo ser un héroe: La historia de Los Prisioneros" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1719720060l/200259769._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465470">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371421181?utm_medium=api&amp;utm_source=custom_widget">Exijo ser un héroe: La historia de Los Prisioneros</a>
+          </div>
+          <div class="gr_custom_author_1771465470">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/45592659.Julio_Osses_Mu_oz">Julio Osses Muñoz</a>
+          </div>
+          <div class="gr_custom_review_1771465470">
+            El día de ayer hablaba con un profesor de sociología, quien me señaló que en el 84' cuando escucho La voz de los 80', con apenas 25 años pensó para sí mismo: —&quot;Estos weones son los mejores, nos ganaron en comprender Chile&quot;. Quizás sea es...
+          </div>
+      </div>
+  <br style="clear: both"/>
+  <center>
+    <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+  </center>
+  <noscript>
+    Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Mutual, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+  </noscript>
+  </div>
+
+      </div>
+      <script src="https://www.goodreads.com/review/custom_widget/198931082.Mutual's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=4&widget_id=1771465470&widget_text_color=000000&widget_title_size=small&widget_width=medium" type="text/javascript" charset="utf-8"></script>
     </div>
   </div>
 
@@ -190,12 +326,148 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 
   <hr class="hero-mobile-divider">
-  <h3 class="lecturas-title lecturas-title-mobile">Estas son nuestras últimas lecturas :)</h3>
+  <h3 class="lecturas-title lecturas-title-mobile">Te compartimos las reseñas de nuestras últimas lecturas. Si te interesa alguna, haz click en la portada del libro.</h3>
   <div class="goodreads-widget goodreads-widget-mobile">
-    <iframe class="goodreads-iframe" src="https://www.goodreads.com/widgets/user_update_widget?height=300&num_updates=5&user=144700241&width=230" width="230" height="300" frameborder="0" title="Actualizaciones de Goodreads">Ver actualizaciones en Goodreads</iframe>
-    <div class="goodreads-footer">
-      <a href="https://www.goodreads.com/"><img alt="Goodreads: Book reviews, recommendations, and discussion" src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png" /></a>
-    </div>
+    <style type="text/css" media="screen">
+  .gr_custom_container_1771465471 {
+    border: 4px solid gray;
+    border-radius:10px;
+    padding: 10px 5px 10px 5px;
+    background-color: transparent;
+    color: #000000;
+    width: 100%
+  }
+  .gr_custom_header_1771465471 {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 70%
+  }
+  .gr_custom_each_container_1771465471 {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+  }
+  .gr_custom_book_container_1771465471 {
+    overflow: hidden;
+    height: 160px;
+      float: left;
+      margin-right: 4px;
+      width: 98px;
+  }
+  .gr_custom_author_1771465471 {
+    font-size: 10px;
+  }
+  .gr_custom_tags_1771465471 {
+    font-size: 10px;
+    color: gray;
+  }
+  .gr_custom_rating_1771465471 {
+    float: right;
+  }
+</style>
+
+      <div id="gr_custom_widget_1771465471">
+          <div class="gr_custom_container_1771465471">
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="El informe: Trabajo intelectual y tristeza burocrática" rel="nofollow" href="https://www.goodreads.com/review/show/8371469483?utm_medium=api&amp;utm_source=custom_widget"><img alt="El informe: Trabajo intelectual y tristeza burocrática" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1717749643l/211111711._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371469483?utm_medium=api&amp;utm_source=custom_widget">El informe: Trabajo intelectual y tristeza burocrática</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7066416.Remedios_Zafra">Remedios Zafra</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            En El Informe, Remedios Zafra no convence desde el argumento abstracto ni desde la lógica analítica, sino a partir de su propia experiencia. En este libro te cuenta quién es, y toda letra que conecta captura aquellos inefables sufrimient...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="Sudamerican Rocker: Un retrato de Jorge González" rel="nofollow" href="https://www.goodreads.com/review/show/8371465924?utm_medium=api&amp;utm_source=custom_widget"><img alt="Sudamerican Rocker: Un retrato de Jorge González" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1761396943l/243183316._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371465924?utm_medium=api&amp;utm_source=custom_widget">Sudamerican Rocker: Un retrato de Jorge González</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/7092170.Juan_Crist_bal_Pe_a">Juan Cristóbal Peña</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            Existe material de sobra para rastrear la figura de Jorge González y su genial impacto en la cultura popular chilena. Mediante su vida se cuenta no sólo la vida de una estrella de rock, sino también la realidad de un país, su evolución y...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="Infocracia: La digitalización y la crisis de la democracia" rel="nofollow" href="https://www.goodreads.com/review/show/8371452448?utm_medium=api&amp;utm_source=custom_widget"><img alt="Infocracia: La digitalización y la crisis de la democracia" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1649430891l/60774041._SY160_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371452448?utm_medium=api&amp;utm_source=custom_widget">Infocracia: La digitalización y la crisis de la democracia</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/970747.Byung_Chul_Han">Byung-Chul Han</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            Leer a Byung-Chul Han no se ve bien entre los círculos más doctos de la teoría social. Se le critica por la falta de rigurosidad de sus ideas, así como por la vocación comercial que demuestra al reverberar ideas en libros cortos que le p...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="Ser en el Sur (Spanish Edition)" rel="nofollow" href="https://www.goodreads.com/review/show/8371447972?utm_medium=api&amp;utm_source=custom_widget"><img alt="Ser en el Sur" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439758366l/26111841._SY160_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371447972?utm_medium=api&amp;utm_source=custom_widget">Ser en el Sur</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/125726.Volodia_Teitelboim">Volodia Teitelboim</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            Pertenezco a una generación de chilenos que no ha tenido grandes momentos de gloria de la que gozaron las anteriores. A mis breves 25 años he visto el desmoronamiento de un proyecto histórico de largo aliento, que se supone venía a cerra...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory (Elements in Politics and Society in Latin America)" rel="nofollow" href="https://www.goodreads.com/review/show/8371441316?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659428426l/61608104._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371441316?utm_medium=api&amp;utm_source=custom_widget">The Circuit of Detachment in Chile: Understanding the Fate of a Neoliberal Laboratory</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/5204673.Kathya_Araujo">Kathya Araujo</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            En Chile fue publicada una re-edición de este libro al español titulada &quot;El circuito del desapego. Neoliberalismo, democratización y lazo social&quot;, por Polvora Editorial. De seguro el carácter independiente y de pequeña escala ha hecho qu...
+          </div>
+      </div>
+      <div class="gr_custom_each_container_1771465471">
+          <div class="gr_custom_book_container_1771465471">
+            <a title="Exijo ser un héroe: La historia de Los Prisioneros (Spanish Edition)" rel="nofollow" href="https://www.goodreads.com/review/show/8371421181?utm_medium=api&amp;utm_source=custom_widget"><img alt="Exijo ser un héroe: La historia de Los Prisioneros" border="0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1719720060l/200259769._SX98_.jpg" /></a>
+          </div>
+          <div class="gr_custom_title_1771465471">
+            <a rel="nofollow" href="https://www.goodreads.com/review/show/8371421181?utm_medium=api&amp;utm_source=custom_widget">Exijo ser un héroe: La historia de Los Prisioneros</a>
+          </div>
+          <div class="gr_custom_author_1771465471">
+            by <a rel="nofollow" href="https://www.goodreads.com/author/show/45592659.Julio_Osses_Mu_oz">Julio Osses Muñoz</a>
+          </div>
+          <div class="gr_custom_review_1771465471">
+            El día de ayer hablaba con un profesor de sociología, quien me señaló que en el 84' cuando escucho La voz de los 80', con apenas 25 años pensó para sí mismo: —&quot;Estos weones son los mejores, nos ganaron en comprender Chile&quot;. Quizás sea es...
+          </div>
+      </div>
+  <br style="clear: both"/>
+  <center>
+    <a rel="nofollow" href="https://www.goodreads.com/"><img alt="goodreads.com" style="border:0" src="https://s.gr-assets.com/images/widget/widget_logo.gif" /></a>
+  </center>
+  <noscript>
+    Share <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a> and ratings with Mutual, and even join a <a rel="nofollow" href="https://www.goodreads.com/group">book club</a> on Goodreads.
+  </noscript>
+  </div>
+
+      </div>
+      <script src="https://www.goodreads.com/review/custom_widget/198931082.Mutual's%20bookshelf:%20read?cover_position=left&cover_size=medium&num_books=5&order=d&shelf=read&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&widget_bg_color=FFFFFF&widget_bg_transparent=true&widget_border_width=4&widget_id=1771465471&widget_text_color=000000&widget_title_size=small&widget_width=medium" type="text/javascript" charset="utf-8"></script>
   </div>
 </section>
 ```
