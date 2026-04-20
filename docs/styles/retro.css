@@ -1,8 +1,81 @@
-/* Retro / early-2000s blog look
-   Palette:
-     --retro-blue: #006FB3
-     --retro-red: #FE6565
-     --retro-green: #35a776
+/* ── Listing oculto que alimenta el carrusel ── */
+.hidden-listing {
+  display: none !important;
+}
+
+/* ── Carrusel de publicaciones ── */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 8px;
+  width: 100%;
+}
+
+.carousel-track-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+}
+
+.carousel-slide {
+  display: none;
+  flex: 0 0 calc(50% - 12px);
+  min-width: 0;
+}
+
+.carousel-slide.carousel-active {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+}
+
+.carousel-arrow {
+  background: #330033;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0.85;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  background: #660066;
+  opacity: 1;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.all-posts-cta {
+  display: flex;
+  justify-content: center;
+  margin: 14px 0 8px;
+}
+
+.all-posts-cta .banner-btn {
+  margin: 0;
+}
+
+/*
    Fonts: Playfair Display (headings), Merriweather (body)
 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
@@ -156,6 +229,78 @@ h1, h2, h3, .manifiesto-title {
 
 .all-posts-cta .banner-btn {
   margin: 0;
+}
+
+/* ── Tarjetas del carrusel ── */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  transition: box-shadow 0.2s;
+  background: #fff;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 16px rgba(51, 0, 51, 0.18);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f0e6f0;
+}
+
+.post-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.post-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: #330033;
+  line-height: 1.3;
+}
+
+.post-card-subtitle {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.post-card-meta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #888;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.post-card-author {
+  font-style: italic;
 }
 
 /* Bottom contact section (parallax + dark overlay) */

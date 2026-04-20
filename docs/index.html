@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/logo_huemul.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-product .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author','listing-date','listing-reading-time','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-product'] = new List('listing-product', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner h1,
@@ -115,35 +84,6 @@ background: #FFFFFF;
       }
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles/retro.css">
@@ -406,134 +346,116 @@ document.addEventListener('DOMContentLoaded', function(){
 <section id="últimas-publicaciones" class="level1">
 <h1>Últimas publicaciones</h1>
 <hr style="border-top: 2px solid #330033; opacity: 1;">
-<div id="listing-product" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1769914800000" data-listing-file-modified-sort="1771413809550" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3534">
-<a href="./product/la_voz_2030.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./images/la_voz_2030.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title" data-anchor-id="últimas-publicaciones">
-Jorge González y La voz del 2030
-</h5>
-<div class="card-subtitle listing-subtitle">
-Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes para sostener algo grande al día de hoy
-</div>
-<div class="listing-reading-time card-text text-muted">
-18 minutos
-</div>
-<div class="card-text listing-description">
-En el eterno ensayo <em>Autosuficiencia. La confianza en uno mismo</em>, Ralph Waldo Emerson quedó grabado en la memoria como el primer romántico de Norteamérica. El poeta veía la…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Nicolás Tobar Jorquera
-</div>
-<div class="listing-date">
-1 feb 2026
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1704250800000" data-listing-file-modified-sort="1771366834594" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<a href="./product/por_subir_3.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="images\logo_huemul.png" alt="Huemul" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Por subir
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pronto más contenido
-</div>
-<div class="listing-reading-time card-text text-muted">
-1 minutos
-</div>
-<div class="card-text listing-description">
-Por subir. Pronto más contenido.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+<div class="carousel-wrapper" aria-label="Carrusel de últimas publicaciones">
+  <button class="carousel-arrow carousel-prev" aria-label="Anterior" type="button">←</button>
+  <div class="carousel-track-container">
+    <div class="carousel-track" id="carousel-track">
 
-</div>
-<div class="listing-date">
-3 ene 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1704164400000" data-listing-file-modified-sort="1771366823897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<a href="./product/por_subir_2.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="images\logo_huemul.png" alt="Huemul" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Por subir
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pronto más contenido
-</div>
-<div class="listing-reading-time card-text text-muted">
-1 minutos
-</div>
-<div class="card-text listing-description">
-Por subir. Pronto más contenido.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+      <div class="carousel-slide carousel-active">
+        <a href="./product/la_voz_2030.html" class="post-card">
+          <div class="post-card-img-wrap">
+            <img src="images/la_voz_2030.png" alt="Jorge González y La voz del 2030" loading="lazy">
+          </div>
+          <div class="post-card-body">
+            <h3 class="post-card-title" data-anchor-id="últimas-publicaciones">Jorge González y La voz del 2030</h3>
+            <p class="post-card-subtitle">Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes para sostener algo grande al día de hoy</p>
+            <div class="post-card-meta">
+              <span class="post-card-author">Nicolás Tobar Jorquera</span>
+              <span class="post-card-date">1 febrero 2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-</div>
-<div class="listing-date">
-2 ene 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1704078000000" data-listing-file-modified-sort="1771366812457" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5">
-<a href="./product/por_subir_1.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="images\logo_huemul.png" alt="Huemul" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Por subir
-</h5>
-<div class="card-subtitle listing-subtitle">
-Pronto más contenido
-</div>
-<div class="listing-reading-time card-text text-muted">
-1 minutos
-</div>
-<div class="card-text listing-description">
-Por subir. Pronto más contenido.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
+      <div class="carousel-slide carousel-active">
+        <a href="./product/por_subir_1.html" class="post-card">
+          <div class="post-card-img-wrap">
+            <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
+          </div>
+          <div class="post-card-body">
+            <h3 class="post-card-title">Por subir</h3>
+            <p class="post-card-subtitle">Pronto más contenido</p>
+            <div class="post-card-meta">
+              <span class="post-card-date">Próximamente</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
+      <div class="carousel-slide">
+        <a href="./product/por_subir_2.html" class="post-card">
+          <div class="post-card-img-wrap">
+            <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
+          </div>
+          <div class="post-card-body">
+            <h3 class="post-card-title">Por subir</h3>
+            <p class="post-card-subtitle">Pronto más contenido</p>
+            <div class="post-card-meta">
+              <span class="post-card-date">Próximamente</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="carousel-slide">
+        <a href="./product/por_subir_3.html" class="post-card">
+          <div class="post-card-img-wrap">
+            <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
+          </div>
+          <div class="post-card-body">
+            <h3 class="post-card-title">Por subir</h3>
+            <p class="post-card-subtitle">Pronto más contenido</p>
+            <div class="post-card-meta">
+              <span class="post-card-date">Próximamente</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <button class="carousel-arrow carousel-next" aria-label="Siguiente" type="button">→</button>
 </div>
-<div class="listing-date">
-1 ene 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No hay resultados
-</div>
-</div>
+
 <div class="all-posts-cta">
-  <a href="./escritos.html" class="banner-btn">Ver blog completo</a>
+  <a href="./escritos.html" class="banner-btn">Ir al Blog</a>
 </div>
+
+<script>
+(function () {
+  var track = document.getElementById('carousel-track');
+  if (!track) return;
+  var slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  var current = 0;
+
+  function getVisible() { return window.innerWidth <= 700 ? 1 : 2; }
+
+  function update() {
+    var visible = getVisible();
+    var total = slides.length;
+    if (current > total - visible) current = Math.max(0, total - visible);
+    slides.forEach(function (slide, i) {
+      var active = i >= current && i < current + visible;
+      slide.classList.toggle('carousel-active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+    });
+    document.querySelector('.carousel-prev').disabled = current === 0;
+    document.querySelector('.carousel-next').disabled = current >= total - visible;
+  }
+
+  document.querySelector('.carousel-prev').addEventListener('click', function () {
+    current = Math.max(0, current - getVisible());
+    update();
+  });
+  document.querySelector('.carousel-next').addEventListener('click', function () {
+    var visible = getVisible();
+    current = Math.min(slides.length - visible, current + visible);
+    update();
+  });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 <div id="somos" style="padding-top: 60px; margin-top: -40px;"></div>
 </section>
 <section id="quiénes-somos" class="level1">
@@ -937,19 +859,19 @@ document.addEventListener('DOMContentLoaded', function () {
       <button class="museum-photo" type="button" data-full-image="images/igualdad_pinguinos.jpg" data-alt="Igualdad pingüinos" data-caption="Igualdad entre Pingüinos de Humboldt" aria-label="Ver imagen completa: Igualdad entre Pingüinos de Humboldt">
         <img src="images/igualdad_pinguinos.jpg" alt="Igualdad pingüinos" loading="lazy" class="figure-img">
       </button>
-      <figcaption>Singularmente iguales</figcaption>
+      <figcaption>La igualdad que querían los pingüinos</figcaption>
     </figure>
     <figure class="museum-frame figure">
       <button class="museum-photo" type="button" data-full-image="images/soy_ese_penguin.jpg" data-alt="¡Somos ese!" data-caption="¡Somos ese!" aria-label="Ver imagen completa: ¡Somos ese!">
         <img src="images/soy_ese_penguin.jpg" alt="¡Somos ese!" loading="lazy" class="figure-img">
       </button>
-        <figcaption>¡Somos ese!</figcaption>
+        <figcaption>Los pingüinos después del movimiento pingüino</figcaption>
     </figure>
     <figure class="museum-frame figure">
       <button class="museum-photo" type="button" data-full-image="images/no_trabajar.jpg" data-alt="No queremos trabajar" data-caption="Yo, no quiero trabajar" aria-label="Ver imagen completa: Yo, no quiero trabajar">
         <img src="images/no_trabajar.jpg" alt="No queremos trabajar" loading="lazy" class="figure-img">
       </button>
-        <figcaption>Yo, no quiero trabajar (en lo que no me interesa)</figcaption>
+        <figcaption>Yo, no quiero trabajar (Si quiero estudiar)</figcaption>
     </figure>  
     <figure class="museum-frame figure">
       <button class="museum-photo" type="button" data-full-image="images/kant_mcc.jpg" data-alt="Filosofía en Chile" data-caption="Se puede hacer Filosofía en Chile" aria-label="Ver imagen completa: Se puede hacer Filosofía en Chile">
@@ -1041,7 +963,6 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </section>
 </section></div>
-
 
 
 
