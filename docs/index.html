@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-17c909d5fd25ae21b861c0c7a49b2096.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b8435405a550a3c04c80202ce7258b3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f90e0cd1323e7526fb27403b33b0f602.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -145,22 +145,12 @@ background: #FFFFFF;
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"><h1 class="hero-title title display-7">Los Huemules</h1></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block"><h1 class="banner-main-title title display-7">Los Huemules</h1></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En esta página</h2>
-   
-  <ul>
-  <li><a href="#últimas-publicaciones" id="toc-últimas-publicaciones" class="nav-link active" data-scroll-target="#últimas-publicaciones">Últimas publicaciones</a></li>
-  <li><a href="#quiénes-somos" id="toc-quiénes-somos" class="nav-link" data-scroll-target="#quiénes-somos">¿Quiénes somos?</a></li>
-  <li><a href="#en-qué-creemos" id="toc-en-qué-creemos" class="nav-link" data-scroll-target="#en-qué-creemos">¿En qué creemos?</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 <header class="site-nav" aria-hidden="true">
 
   <div class="site-nav-inner">
@@ -250,47 +240,37 @@ background: #FFFFFF;
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+// Quarto inyecta padding-top en body via style inline para la navbar.
+// Lo eliminamos inmediatamente antes de que el navegador pinte.
+(function() {
+  function stripBodyPadding() {
+    document.body.style.removeProperty("padding-top");
+    document.body.style.paddingTop = "0px";
+    document.documentElement.style.paddingTop = "0px";
+    document.documentElement.style.marginTop = "0px";
+    document.body.style.marginTop = "0px";
+  }
+  stripBodyPadding();
+  document.addEventListener("DOMContentLoaded", stripBodyPadding);
+  // Por si Quarto lo aplica tarde (scroll restoration)
+  window.addEventListener("load", stripBodyPadding);
+  // Observer por si algún script lo reinyecta
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.attributeName === "style") { stripBodyPadding(); }
+    });
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    observer.observe(document.body, { attributes: true });
+  });
+})();
+</script>
 <section class="home-banner" style="background-image: url('images/banner_huemul.jpg');">
 
-  <div class="banner-vertical-socials" aria-hidden="false">
-    <a class="banner-social-vertical" href="https://www.instagram.com/" aria-label="Instagram">
-      <i class="bi bi-instagram" role="img" aria-hidden="true"></i>
-    </a>
-    <a class="banner-social-vertical" href="https://www.youtube.com/" aria-label="YouTube">
-      <i class="bi bi-youtube" role="img" aria-hidden="true"></i>
-    </a>
-    <a class="banner-social-vertical" href="https://www.tiktok.com/" aria-label="TikTok">
-      <i class="bi bi-tiktok" role="img" aria-hidden="true"></i>
-    </a>
-    <button class="banner-social-vertical banner-search-btn" aria-label="Buscar en la página">
-      <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
-    </button>
-  </div>
 
-  <form class="banner-search-form" role="search" aria-label="Buscar en la página">
-    <input type="search" name="bq" placeholder="Buscar en la página" aria-label="Buscar en la página">
-  </form>
 
   <div class="banner-overlay">
-
-    <div class="banner-topbar">
-      <div class="top-left">
-        <div class="site-brand-mini">
-          <img src="images/logo_huemul.png" alt="logo" class="site-brand-icon">
-          <div class="mini-title">Los Huemules<br><small>Mutual de Artistas, Políticos e Intelectuales</small></div>
-        </div>
-      </div>
-
-      <div class="top-center">
-        <a href="./escritos.html" class="banner-btn">Blog</a>
-        <a href="#somos" class="banner-btn">Somos</a>
-        <a href="#creemos" class="banner-btn">Manifiesto</a>
-      </div>
-
-      <div class="top-right">
-        <!-- intentionally left empty: banner socials and search moved to the vertical column -->
-      </div>
-    </div>
 
     <div class="hero-cross">
 
@@ -306,7 +286,6 @@ background: #FFFFFF;
       <!-- CENTRO: título -->
       <div class="hero-cross-center">
         
-        <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
       </div>
 
       <!-- IZQUIERDA: Proyecto -->
@@ -318,8 +297,36 @@ background: #FFFFFF;
         <span class="hero-cross-label">Proyecto</span>
       </a>
 
-      <!-- ABAJO, DERECHA: reservados -->
+      <!-- DERECHA: Videos -->
+      <a href="#videos" class="hero-cross-icon hero-cross-right" aria-label="Videos">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/icono_videos1.png" alt="">
+          <img class="icon-hover" src="images/icono_videos2.png" alt="">
+        </div>
+        <span class="hero-cross-label">Videos</span>
+      </a>
 
+      <!-- ABAJO: Contacto -->
+      <a href="#contacto" class="hero-cross-icon hero-cross-bottom" aria-label="Contacto">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/logo-contacto1.png" alt="">
+          <img class="icon-hover" src="images/logo-contacto.png" alt="">
+        </div>
+        <span class="hero-cross-label">Contacto</span>
+      </a>
+
+    </div>
+
+    <div class="banner-bottom-socials">
+      <a class="banner-social-bottom" href="https://www.instagram.com/" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a class="banner-social-bottom" href="https://www.youtube.com/" aria-label="YouTube">
+        <i class="bi bi-youtube"></i>
+      </a>
+      <a class="banner-social-bottom" href="https://www.tiktok.com/" aria-label="TikTok">
+        <i class="bi bi-tiktok"></i>
+      </a>
     </div>
 
   </div>
@@ -379,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>
-<div class="content-container page-columns page-full">
+<div class="content-container">
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
 <section id="últimas-publicaciones" class="level1">
 <h1>Últimas publicaciones</h1>
@@ -496,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
     <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
     <hr class="hero-left-divider">
-    <h3 class="lecturas-title lecturas-title-desktop anchored" data-anchor-id="quiénes-somos">Te compartimos las reseñas de nuestras últimas lecturas.</h3>
+    <h3 class="lecturas-title lecturas-title-desktop anchored">Te compartimos las reseñas de nuestras últimas lecturas.</h3>
     <div class="goodreads-widget goodreads-widget-desktop">
       <style type="text/css" media="screen">
   .gr_custom_container_1771465470 {
@@ -807,65 +814,6 @@ document.addEventListener('DOMContentLoaded', function(){
   <img src="images/foto_nosotros.jpeg" alt="Integrantes de Los Huemules en su cafetería de encuentro" class="nosotros-photo-img figure-img">
   <figcaption>Estos somos nosotros en la cafetería en la que nos juntamos a escribir</figcaption>
 </figure>
-<div id="creemos" style="padding-top: 60px; margin-top: -40px;">
-
-</div>
-</section>
-<section id="en-qué-creemos" class="level1 page-columns page-full">
-<h1>¿En qué creemos?</h1>
-<hr style="border-top: 2px solid #000000ff; opacity: 1;">
-<div class="manifiesto-wrapper page-columns page-full">
-<div class="manifiesto-columns page-columns page-full">
-<div class="manifiesto-main">
-<div class="manifiesto-logo">
-  <img src="images/logo_huemul.png" alt="Logo Huemules">
-</div>
-
-<h1 class="manifiesto-title">Manifiesto</h1>
-
-<ol class="manifiesto-text">
-  <li>Reconocemos la oscilación como el orden natural del mundo.</li>
-  <li>Debemos liberarnos de la inercia resultante de un siglo de ingenuidad modernista ideológica y de la falta de sinceridad cínica de su antónimo, hijo bastardo.</li>
-  <li>El movimiento hacia adelante se habilita por medio de una oscilación entre posiciones con ideas diametralmente opuestas, que operan como las polaridades pulsantes de una máquina eléctrica colosal, propulsando el mundo en acción.</li>
-  <li>Somos conscientes de las limitaciones inherentes a todo movimiento y experiencia, y de la futilidad de cualquier intento por trascenderlas. La incompletitud esencial de un sistema no exige sumisión, sino una adhesión orientada a vislumbrar una exterioridad posible. La existencia se enriquece cuando actuamos como si esos límites pudieran ser excedidos.</li>
-  <li>Todas las cosas están atrapadas en una diapositiva irrevocable hacia un estado de entropía máxima disimulada. La creación artística es contingente a la revelación de la diferencia en sí misma. En su cénit, el arte es experiencia inmediata de la diferencia.</li>
-  <li>El presente es un síntoma del nacimiento gemelo de la inmediatez y la obsolescencia. Las nuevas tecnologías permiten la experiencia simultánea de los hechos desde una multiplicidad de posiciones, facilitando la democratización de la historia.</li>
-  <li>Así como la ciencia busca la elegancia poética, el arte puede asumir la búsqueda de la verdad. Toda información es base de conocimiento, empírica o aforística. Debemos abrazar una síntesis científico-poética. El error genera sentido.</li>
-  <li>Se propone un romanticismo pragmático sin anclajes ideológicos. El metamodernismo es la condición mercurial que existe entre, más allá y en la búsqueda de múltiples horizontes fragmentarios. Debemos seguir adelante y oscilar.</li>
-</ol>
-</div>
-<aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
-<h3 class="manifiesto-playlist-title anchored">
-Música que expresa nuestras convicciones
-</h3>
-<iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-</iframe>
-</aside>
-</div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const mainCol = document.querySelector('.manifiesto-main');
-  const spotify = document.getElementById('manifiesto-spotify');
-  const playlistTitle = document.querySelector('.manifiesto-playlist-title');
-  if (!mainCol || !spotify) return;
-
-  function syncPlaylistHeight() {
-    if (window.innerWidth <= 880) {
-      spotify.style.height = '152px';
-      return;
-    }
-    const titleHeight = playlistTitle ? playlistTitle.offsetHeight : 0;
-    const targetHeight = Math.max(mainCol.offsetHeight - titleHeight - 10, 0);
-    spotify.style.height = targetHeight + 'px';
-  }
-
-  syncPlaylistHeight();
-  setTimeout(syncPlaylistHeight, 250);
-  window.addEventListener('resize', syncPlaylistHeight);
-  window.addEventListener('load', syncPlaylistHeight);
-});
-</script>
 <section class="inspiraciones-section" aria-label="Nuestras inspiraciones">
   <div class="inspiraciones-layout">
     <h3 class="inspiraciones-title anchored">Algunas de nuestras inspiraciones</h3>
@@ -966,7 +914,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <section id="contacto" class="contact-parallax" style="background-image: url('images/huemul_mail.jpg');">
   <div class="contact-overlay"></div>
   <div class="contact-content">
-    <h2 class="contact-title anchored" data-anchor-id="en-qué-creemos">¿Quieres hablar con nosotros? Contáctanos</h2>
+    <h2 class="contact-title anchored" data-anchor-id="quiénes-somos">¿Quieres hablar con nosotros? Contáctanos</h2>
     <div class="contact-divider"></div>
 
     <form class="contact-form" action="https://formsubmit.co/mutualhuemules@gmail.com" method="POST">
