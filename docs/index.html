@@ -87,16 +87,17 @@ background: #FFFFFF;
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="styles/retro.css">
-<link rel="stylesheet" href="home.css">
 <meta property="og:title" content="Mutual Los Huemules">
-<meta property="og:image" content="images/logo_huemul.png">
+<meta property="og:image" content="./images/logo_huemul.png">
 <meta property="og:site_name" content="Mutual Los Huemules">
+<meta property="og:image:alt" content="logo">
 <meta name="twitter:title" content="Mutual Los Huemules">
-<meta name="twitter:image" content="images/logo_huemul.png">
+<meta name="twitter:image" content="./images/logo_huemul.png">
+<meta name="twitter:image:alt" content="logo">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -144,10 +145,22 @@ background: #FFFFFF;
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<header id="title-block-header" class="quarto-title-block"><h1 class="hero-title title display-7">Los Huemules</h1></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#últimas-publicaciones" id="toc-últimas-publicaciones" class="nav-link active" data-scroll-target="#últimas-publicaciones">Últimas publicaciones</a></li>
+  <li><a href="#quiénes-somos" id="toc-quiénes-somos" class="nav-link" data-scroll-target="#quiénes-somos">¿Quiénes somos?</a></li>
+  <li><a href="#en-qué-creemos" id="toc-en-qué-creemos" class="nav-link" data-scroll-target="#en-qué-creemos">¿En qué creemos?</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full column-page-left" id="quarto-document-content">
 <header class="site-nav" aria-hidden="true">
 
   <div class="site-nav-inner">
@@ -279,8 +292,35 @@ background: #FFFFFF;
       </div>
     </div>
 
-    <h1 class="hero-title">Los Huemules</h1>
-    <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
+    <div class="hero-cross">
+
+      <!-- ARRIBA: Blog -->
+      <a href="./escritos.html" class="hero-cross-icon hero-cross-top" aria-label="Blog">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/icono_blog_1.png" alt="">
+          <img class="icon-hover" src="images/icono_blog.png" alt="">
+        </div>
+        <span class="hero-cross-label">Blog</span>
+      </a>
+
+      <!-- CENTRO: título -->
+      <div class="hero-cross-center">
+        
+        <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
+      </div>
+
+      <!-- IZQUIERDA: Proyecto -->
+      <a href="#somos" class="hero-cross-icon hero-cross-left" aria-label="Proyecto">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/logo_nosotros1.png" alt="">
+          <img class="icon-hover" src="images/logo_nosotros2.png" alt="">
+        </div>
+        <span class="hero-cross-label">Proyecto</span>
+      </a>
+
+      <!-- ABAJO, DERECHA: reservados -->
+
+    </div>
 
   </div>
 
@@ -339,25 +379,23 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 });
 </script>
-<div class="content-container">
-<div id="novedades" style="padding-top: 60px; margin-top: -40px;">
-
-</div>
+<div class="content-container page-columns page-full">
+<div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
 <section id="últimas-publicaciones" class="level1">
 <h1>Últimas publicaciones</h1>
 <hr style="border-top: 2px solid #330033; opacity: 1;">
-<div class="carousel-wrapper" aria-label="Carrusel de últimas publicaciones">
+<div class="coverflow-wrapper" aria-label="Carrusel de últimas publicaciones">
   <button class="carousel-arrow carousel-prev" aria-label="Anterior" type="button">←</button>
-  <div class="carousel-track-container">
-    <div class="carousel-track" id="carousel-track">
+  <div class="coverflow-scene">
+    <div class="coverflow-track" id="coverflow-track">
 
-      <div class="carousel-slide carousel-active">
+      <div class="coverflow-slide">
         <a href="./product/la_voz_2030.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/la_voz_2030.png" alt="Jorge González y La voz del 2030" loading="lazy">
           </div>
           <div class="post-card-body">
-            <h3 class="post-card-title" data-anchor-id="últimas-publicaciones">Jorge González y La voz del 2030</h3>
+            <h3 class="post-card-title anchored" data-anchor-id="últimas-publicaciones">Jorge González y La voz del 2030</h3>
             <p class="post-card-subtitle">Cómo la vida del cantautor chileno entrega pistas sobre la incapacidad de nuestro país y de sus juventudes para sostener algo grande al día de hoy</p>
             <div class="post-card-meta">
               <span class="post-card-author">Nicolás Tobar Jorquera</span>
@@ -367,13 +405,13 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide carousel-active">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_1.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
           </div>
           <div class="post-card-body">
-            <h3 class="post-card-title">Por subir</h3>
+            <h3 class="post-card-title anchored">Por subir</h3>
             <p class="post-card-subtitle">Pronto más contenido</p>
             <div class="post-card-meta">
               <span class="post-card-date">Próximamente</span>
@@ -382,13 +420,13 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_2.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
           </div>
           <div class="post-card-body">
-            <h3 class="post-card-title">Por subir</h3>
+            <h3 class="post-card-title anchored">Por subir</h3>
             <p class="post-card-subtitle">Pronto más contenido</p>
             <div class="post-card-meta">
               <span class="post-card-date">Próximamente</span>
@@ -397,13 +435,13 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_3.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
           </div>
           <div class="post-card-body">
-            <h3 class="post-card-title">Por subir</h3>
+            <h3 class="post-card-title anchored">Por subir</h3>
             <p class="post-card-subtitle">Pronto más contenido</p>
             <div class="post-card-meta">
               <span class="post-card-date">Próximamente</span>
@@ -423,36 +461,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <script>
 (function () {
-  var track = document.getElementById('carousel-track');
+  var track = document.getElementById('coverflow-track');
   if (!track) return;
-  var slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  var slides = Array.from(track.querySelectorAll('.coverflow-slide'));
+  var total = slides.length;
   var current = 0;
 
-  function getVisible() { return window.innerWidth <= 700 ? 1 : 2; }
-
   function update() {
-    var visible = getVisible();
-    var total = slides.length;
-    if (current > total - visible) current = Math.max(0, total - visible);
     slides.forEach(function (slide, i) {
-      var active = i >= current && i < current + visible;
-      slide.classList.toggle('carousel-active', active);
-      slide.setAttribute('aria-hidden', String(!active));
+      slide.setAttribute('data-pos', i - current);
     });
     document.querySelector('.carousel-prev').disabled = current === 0;
-    document.querySelector('.carousel-next').disabled = current >= total - visible;
+    document.querySelector('.carousel-next').disabled = current === total - 1;
   }
 
   document.querySelector('.carousel-prev').addEventListener('click', function () {
-    current = Math.max(0, current - getVisible());
-    update();
+    if (current > 0) { current--; update(); }
   });
   document.querySelector('.carousel-next').addEventListener('click', function () {
-    var visible = getVisible();
-    current = Math.min(slides.length - visible, current + visible);
-    update();
+    if (current < total - 1) { current++; update(); }
   });
-  window.addEventListener('resize', update);
+
   update();
 })();
 </script>
@@ -467,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <img src="images/escudo_huemul.jpg" alt="Huemules" class="hero-logo">
     <div class="hero-label">Mutual Los Huemules. Hacia una vía chilena al Metamodernismo</div>
     <hr class="hero-left-divider">
-    <h3 class="lecturas-title lecturas-title-desktop" data-anchor-id="quiénes-somos">Te compartimos las reseñas de nuestras últimas lecturas.</h3>
+    <h3 class="lecturas-title lecturas-title-desktop anchored" data-anchor-id="quiénes-somos">Te compartimos las reseñas de nuestras últimas lecturas.</h3>
     <div class="goodreads-widget goodreads-widget-desktop">
       <style type="text/css" media="screen">
   .gr_custom_container_1771465470 {
@@ -630,7 +659,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </div>
 
   <hr class="hero-mobile-divider">
-  <h3 class="lecturas-title lecturas-title-mobile">Te compartimos las reseñas de nuestras últimas lecturas. Si te interesa alguna, haz click en la portada del libro.</h3>
+  <h3 class="lecturas-title lecturas-title-mobile anchored">Te compartimos las reseñas de nuestras últimas lecturas. Si te interesa alguna, haz click en la portada del libro.</h3>
   <div class="goodreads-widget goodreads-widget-mobile">
     <style type="text/css" media="screen">
   .gr_custom_container_1771465471 {
@@ -782,11 +811,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
 </div>
 </section>
-<section id="en-qué-creemos" class="level1">
+<section id="en-qué-creemos" class="level1 page-columns page-full">
 <h1>¿En qué creemos?</h1>
 <hr style="border-top: 2px solid #000000ff; opacity: 1;">
-<div class="manifiesto-wrapper">
-<div class="manifiesto-columns">
+<div class="manifiesto-wrapper page-columns page-full">
+<div class="manifiesto-columns page-columns page-full">
 <div class="manifiesto-main">
 <div class="manifiesto-logo">
   <img src="images/logo_huemul.png" alt="Logo Huemules">
@@ -806,7 +835,7 @@ document.addEventListener('DOMContentLoaded', function(){
 </ol>
 </div>
 <aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
-<h3 class="manifiesto-playlist-title">
+<h3 class="manifiesto-playlist-title anchored">
 Música que expresa nuestras convicciones
 </h3>
 <iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
@@ -839,7 +868,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <section class="inspiraciones-section" aria-label="Nuestras inspiraciones">
   <div class="inspiraciones-layout">
-    <h3 class="inspiraciones-title">Algunas de nuestras inspiraciones</h3>
+    <h3 class="inspiraciones-title anchored">Algunas de nuestras inspiraciones</h3>
     <div class="inspiraciones-links">
       <a class="inspiracion-card" href="https://teoriasocialhoy.org/" target="_blank" rel="noopener noreferrer" aria-label="Teoría Social Hoy">
         <img src="images/teoria_social_hoy.jpg" alt="Teoría Social Hoy">
@@ -937,7 +966,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <section id="contacto" class="contact-parallax" style="background-image: url('images/huemul_mail.jpg');">
   <div class="contact-overlay"></div>
   <div class="contact-content">
-    <h2 class="contact-title" data-anchor-id="en-qué-creemos">¿Quieres hablar con nosotros? Contáctanos</h2>
+    <h2 class="contact-title anchored" data-anchor-id="en-qué-creemos">¿Quieres hablar con nosotros? Contáctanos</h2>
     <div class="contact-divider"></div>
 
     <form class="contact-form" action="https://formsubmit.co/mutualhuemules@gmail.com" method="POST">
@@ -967,7 +996,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+</main> <!-- /main -->
 <script>
 
 document.addEventListener('DOMContentLoaded', function(){

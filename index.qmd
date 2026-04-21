@@ -1,4 +1,4 @@
----
+﻿---
 pagetitle: "Mutual Los Huemules"
 lang: es
 toc: false
@@ -51,8 +51,35 @@ css: [home.css, styles/retro.css]
       </div>
     </div>
 
-    <h1 class="hero-title">Los Huemules</h1>
-    <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
+    <div class="hero-cross">
+
+      <!-- ARRIBA: Blog -->
+      <a href="./escritos.html" class="hero-cross-icon hero-cross-top" aria-label="Blog">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/icono_blog_1.png" alt="">
+          <img class="icon-hover"   src="images/icono_blog.png"   alt="">
+        </div>
+        <span class="hero-cross-label">Blog</span>
+      </a>
+
+      <!-- CENTRO: título -->
+      <div class="hero-cross-center">
+        <h1 class="hero-title">Los Huemules</h1>
+        <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
+      </div>
+
+      <!-- IZQUIERDA: Proyecto -->
+      <a href="#somos" class="hero-cross-icon hero-cross-left" aria-label="Proyecto">
+        <div class="hero-cross-icon-img">
+          <img class="icon-default" src="images/logo_nosotros1.png" alt="">
+          <img class="icon-hover"   src="images/logo_nosotros2.png" alt="">
+        </div>
+        <span class="hero-cross-label">Proyecto</span>
+      </a>
+
+      <!-- ABAJO, DERECHA: reservados -->
+
+    </div>
 
   </div>
 
@@ -117,18 +144,20 @@ document.addEventListener('DOMContentLoaded', function(){
 <div class="content-container">
 ```
 
+```{=html}
 <div id="novedades" style="padding-top: 60px; margin-top: -40px;"></div>
+```
 
 # Últimas publicaciones
 <hr style="border-top: 2px solid #330033; opacity: 1;">
 
 ```{=html}
-<div class="carousel-wrapper" aria-label="Carrusel de últimas publicaciones">
+<div class="coverflow-wrapper" aria-label="Carrusel de últimas publicaciones">
   <button class="carousel-arrow carousel-prev" aria-label="Anterior" type="button">&#8592;</button>
-  <div class="carousel-track-container">
-    <div class="carousel-track" id="carousel-track">
+  <div class="coverflow-scene">
+    <div class="coverflow-track" id="coverflow-track">
 
-      <div class="carousel-slide carousel-active">
+      <div class="coverflow-slide">
         <a href="./product/la_voz_2030.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/la_voz_2030.png" alt="Jorge González y La voz del 2030" loading="lazy">
@@ -144,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide carousel-active">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_1.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
@@ -159,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_2.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
@@ -174,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function(){
         </a>
       </div>
 
-      <div class="carousel-slide">
+      <div class="coverflow-slide">
         <a href="./product/por_subir_3.html" class="post-card">
           <div class="post-card-img-wrap">
             <img src="images/logo_huemul.png" alt="Por subir" loading="lazy">
@@ -200,36 +229,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <script>
 (function () {
-  var track = document.getElementById('carousel-track');
+  var track = document.getElementById('coverflow-track');
   if (!track) return;
-  var slides = Array.from(track.querySelectorAll('.carousel-slide'));
+  var slides = Array.from(track.querySelectorAll('.coverflow-slide'));
+  var total = slides.length;
   var current = 0;
 
-  function getVisible() { return window.innerWidth <= 700 ? 1 : 2; }
-
   function update() {
-    var visible = getVisible();
-    var total = slides.length;
-    if (current > total - visible) current = Math.max(0, total - visible);
     slides.forEach(function (slide, i) {
-      var active = i >= current && i < current + visible;
-      slide.classList.toggle('carousel-active', active);
-      slide.setAttribute('aria-hidden', String(!active));
+      slide.setAttribute('data-pos', i - current);
     });
     document.querySelector('.carousel-prev').disabled = current === 0;
-    document.querySelector('.carousel-next').disabled = current >= total - visible;
+    document.querySelector('.carousel-next').disabled = current === total - 1;
   }
 
   document.querySelector('.carousel-prev').addEventListener('click', function () {
-    current = Math.max(0, current - getVisible());
-    update();
+    if (current > 0) { current--; update(); }
   });
   document.querySelector('.carousel-next').addEventListener('click', function () {
-    var visible = getVisible();
-    current = Math.min(slides.length - visible, current + visible);
-    update();
+    if (current < total - 1) { current++; update(); }
   });
-  window.addEventListener('resize', update);
+
   update();
 })();
 </script>

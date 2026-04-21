@@ -1,50 +1,192 @@
-/* ── Listing oculto que alimenta el carrusel ── */
-.hidden-listing {
-  display: none !important;
+﻿/* â”€â”€ Hero banner overlay â”€â”€ */
+.banner-overlay { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 360px; padding: 36px 12px; }
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HERO CROSS â€“ cruz central del banner
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.hero-cross {
+  display: grid;
+  grid-template-columns: 220px 1fr 220px;
+  grid-template-rows:    240px 1fr 80px;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+  align-items: center;
+  justify-items: center;
 }
 
-/* ── Carrusel de publicaciones ── */
-.carousel-wrapper {
+/* Centro: ocupa la celda (2,2) */
+.hero-cross-center {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+}
+
+/* Ãconos: posiciones en la cruz */
+.hero-cross-top    { grid-column: 2; grid-row: 1; }
+.hero-cross-right  { grid-column: 3; grid-row: 2; }
+.hero-cross-bottom { grid-column: 2; grid-row: 3; }
+.hero-cross-left   { grid-column: 1; grid-row: 2; }
+
+/* Cada Ã­cono de la cruz */
+.hero-cross-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Contenedor de la imagen: doble img con hover swap */
+.hero-cross-icon-img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: box-shadow 0.25s ease;
+}
+
+.hero-cross-icon-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0; left: 0;
+  transition: opacity 0.22s ease;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.35));
+}
+
+/* Estado por defecto: icono_1 visible, hover oculto */
+.hero-cross-icon-img .icon-default { opacity: 1; }
+.hero-cross-icon-img .icon-hover   { opacity: 0; }
+
+/* Al pasar el cursor: swap de Ã­conos + aura blanca */
+.hero-cross-icon:hover .hero-cross-icon-img {
+  box-shadow: 0 0 0 6px rgba(255,255,255,0.55), 0 0 18px 6px rgba(255,255,255,0.30);
+}
+.hero-cross-icon:hover .hero-cross-icon-img .icon-default { opacity: 0; }
+.hero-cross-icon:hover .hero-cross-icon-img .icon-hover   { opacity: 1; }
+
+/* Etiqueta debajo del Ã­cono */
+.hero-cross-label {
+  color: rgba(255,255,255,0.92);
+  font-size: 0.90rem;
+  font-family: "Merriweather", serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  transition: color 0.2s;
+}
+.hero-cross-icon:hover .hero-cross-label {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .hero-cross {
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows:    60px 1fr 60px;
+    gap: 10px;
+    max-width: 340px;
+  }
+  .hero-cross-icon-img { width: 100px; height: 100px; }
+}
+
+/* ══════════════════════════════════════════
+   CARRUSEL 3D - COVERFLOW
+   ══════════════════════════════════════════ */
+
+/* Contenedor externo: flechas + escena */
+.coverflow-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 24px 0 8px;
+  gap: 16px;
+  margin: 32px 0 8px;
   width: 100%;
 }
 
-.carousel-track-container {
+/* La escena 3D: perspectiva aplicada aquÃ­ */
+.coverflow-scene {
   flex: 1;
-  overflow: hidden;
+  perspective: 1200px;
+  overflow: visible;
+  height: 420px;
+  position: relative;
 }
 
-.carousel-track {
-  display: flex;
-  gap: 24px;
+/* Track: contiene todas las slides, centrado */
+.coverflow-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
 }
 
-.carousel-slide {
-  display: none;
-  flex: 0 0 calc(50% - 12px);
-  min-width: 0;
+/* Cada slide: posiciÃ³n absoluta, centrada */
+.coverflow-slide {
+  position: absolute;
+  width: 52%;
+  top: 0;
+  left: 50%;
+  transform-origin: center center;
+  transition:
+    transform 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity   0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    filter    0.55s ease,
+    z-index   0s;
 }
 
-.carousel-slide.carousel-active {
-  display: block;
+/* â”€â”€ PosiciÃ³n central (activa): pos = 0 â”€â”€ */
+.coverflow-slide[data-pos="0"] {
+  transform: translateX(-50%) translateZ(0) rotateY(0deg) scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 10;
 }
 
-@media (max-width: 700px) {
-  .carousel-slide {
-    flex: 0 0 100%;
-  }
+/* â”€â”€ Slide a la derecha: pos = 1 â”€â”€ */
+.coverflow-slide[data-pos="1"] {
+  transform: translateX(10%) translateZ(-160px) rotateY(-38deg) scale(0.82);
+  opacity: 0.65;
+  filter: brightness(0.75);
+  z-index: 5;
 }
 
+/* â”€â”€ Slide a la izquierda: pos = -1 â”€â”€ */
+.coverflow-slide[data-pos="-1"] {
+  transform: translateX(-110%) translateZ(-160px) rotateY(38deg) scale(0.82);
+  opacity: 0.65;
+  filter: brightness(0.75);
+  z-index: 5;
+}
+
+/* â”€â”€ Slides mÃ¡s alejadas: ocultas pero presentes â”€â”€ */
+.coverflow-slide[data-pos="2"],
+.coverflow-slide[data-pos="-2"] {
+  transform: translateX(-50%) translateZ(-320px) scale(0.6);
+  opacity: 0;
+  filter: brightness(0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Slides fuera del rango visible */
+.coverflow-slide:not([data-pos="0"]):not([data-pos="1"]):not([data-pos="-1"]):not([data-pos="2"]):not([data-pos="-2"]) {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transform: translateX(-50%) translateZ(-400px) scale(0.5);
+}
+
+/* Flechas del carrusel */
 .carousel-arrow {
   background: #330033;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   font-size: 1.3rem;
   cursor: pointer;
   flex-shrink: 0;
@@ -53,6 +195,8 @@
   justify-content: center;
   transition: background 0.2s, opacity 0.2s;
   opacity: 0.85;
+  z-index: 20;
+  position: relative;
 }
 
 .carousel-arrow:hover:not(:disabled) {
@@ -65,6 +209,7 @@
   cursor: default;
 }
 
+/* BotÃ³n "Ir al Blog" */
 .all-posts-cta {
   display: flex;
   justify-content: center;
@@ -73,6 +218,23 @@
 
 .all-posts-cta .banner-btn {
   margin: 0;
+}
+
+/* Responsive: reducir escena en mÃ³vil */
+@media (max-width: 700px) {
+  .coverflow-scene {
+    height: 340px;
+    perspective: 700px;
+  }
+  .coverflow-slide {
+    width: 80%;
+  }
+  .coverflow-slide[data-pos="1"] {
+    transform: translateX(15%) translateZ(-100px) rotateY(-30deg) scale(0.78);
+  }
+  .coverflow-slide[data-pos="-1"] {
+    transform: translateX(-95%) translateZ(-100px) rotateY(30deg) scale(0.78);
+  }
 }
 
 /*
@@ -231,7 +393,7 @@ h1, h2, h3, .manifiesto-title {
   margin: 0;
 }
 
-/* ── Tarjetas del carrusel ── */
+/* â”€â”€ Tarjetas del carrusel â”€â”€ */
 .post-card {
   display: flex;
   flex-direction: column;
@@ -1472,7 +1634,7 @@ header#quarto-header, header.quarto-banner, .navbar-brand-container, .navbar-bra
   .escrito-small { width: calc(50% - 6px); }
 }
 
-/* Página escritos: cards horizontales apilados */
+/* PÃ¡gina escritos: cards horizontales apilados */
 .escritos-page-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(100px, 140px);
@@ -1837,4 +1999,6 @@ h1, h2, h3 { scroll-margin-top: calc(var(--site-nav-height) + var(--site-nav-gap
     margin: 0 auto;
   }
 }
+
+
 
