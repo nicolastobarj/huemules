@@ -1,4 +1,4 @@
-﻿project:
+project:
   type: website
   output-dir: docs
 
@@ -54,11 +54,11 @@ format:
     monofont: "EB Garamond"
     css: [styles.css, styles/retro.css]
     grid:
-      sidebar-width: 0px
-      body-width: 10000px
-      margin-width: 0px
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 200px
       gutter-width: 1.5rem
-    toc: false
+    toc: true
     highlight-style: monokai
     title-block-banner: "#FFFFFF"
     title-block-banner-color: "#2666b5"
@@ -70,5 +70,4 @@ editor: source
 
 execute:
   freeze: auto
-
 

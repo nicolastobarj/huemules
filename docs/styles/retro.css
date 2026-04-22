@@ -1,4 +1,5 @@
 ﻿/* â”€â”€ Hero banner overlay â”€â”€ */
+.banner-overlay { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 360px; padding: 36px 12px; }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    HERO CROSS â€“ cruz central del banner
@@ -283,12 +284,11 @@ main.content,
   padding: 18px;
 }
 
-/* Banner - home.css lo sobreescribe con position:fixed */
+/* Banner */
 .home-banner {
   border-bottom: 0;
   background-size: cover;
   background-position: center center;
-  width: 100%;
   min-height: 100vh;
   position: relative;
 }
@@ -299,11 +299,9 @@ main.content,
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 40px 20px 32px;
-  box-sizing: border-box;
 }
 
 /* Top bar inside the banner: left / center / right */
@@ -1299,6 +1297,7 @@ blockquote {
 
 /* Hero title and sticky nav behavior */
 .home-banner { position: relative; overflow: hidden; }
+.banner-overlay { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 360px; padding: 36px 12px; }
 .hero-title {
   font-family: "Playfair Display", serif;
   font-size: 3.2rem;
@@ -2001,92 +2000,5 @@ h1, h2, h3 { scroll-margin-top: calc(var(--site-nav-height) + var(--site-nav-gap
   }
 }
 
-
-
-
-/* Ocultar TOC y sidebar en el index */
-#quarto-sidebar, #quarto-toc-float, .sidebar, nav[role="doc-toc"] {
-  display: none !important;
-}
-
-/* Redes sociales centradas abajo del banner */
-.banner-bottom-socials {
-  position: absolute;
-  bottom: 28px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  z-index: 6;
-}
-
-.banner-social-bottom {
-  display: inline-flex;
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.35);
-  border-radius: 50%;
-  color: #fff;
-  font-size: 1.3rem;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.18);
-  transition: background 0.2s, transform 0.2s;
-}
-
-.banner-social-bottom:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-3px);
-  color: #fff;
-}
-
-.banner-topbar {
-  position: absolute;
-  top: 18px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 6;
-  padding: 0 18px;
-}
-.banner-main-title {
-  font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 2px 8px rgba(0,0,0,0.5);
-  letter-spacing: 0.04em;
-}
-
-/* ── Título principal del banner ── */
-.banner-main-title {
-  font-family: "Playfair Display", serif;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.75), 0 2px 8px rgba(0,0,0,0.5);
-  letter-spacing: 0.04em;
-}
-
-/* Centrar el banner-topbar */
-.banner-topbar {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-/* Ocultar elementos del topbar que no usamos más */
-.top-left, .top-center, .top-right { display: none !important; }
-.site-brand-mini { display: none !important; }
-
-/* Hero cross center vacío: ocultar */
 
 

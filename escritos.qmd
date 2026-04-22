@@ -45,28 +45,3 @@ listing:
   </div>
 </section>
 ```
-```{=html}
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const mainCol = document.querySelector('.manifiesto-main');
-  const spotify = document.getElementById('manifiesto-spotify');
-  const playlistTitle = document.querySelector('.manifiesto-playlist-title');
-  if (!mainCol || !spotify) return;
-
-  function syncPlaylistHeight() {
-    if (window.innerWidth <= 880) {
-      spotify.style.height = '152px';
-      return;
-    }
-    const titleHeight = playlistTitle ? playlistTitle.offsetHeight : 0;
-    const targetHeight = Math.max(mainCol.offsetHeight - titleHeight - 10, 0);
-    spotify.style.height = targetHeight + 'px';
-  }
-
-  syncPlaylistHeight();
-  setTimeout(syncPlaylistHeight, 250);
-  window.addEventListener('resize', syncPlaylistHeight);
-  window.addEventListener('load', syncPlaylistHeight);
-});
-</script>
-```

@@ -1,45 +1,55 @@
 ﻿---
 pagetitle: "Mutual Los Huemules"
 lang: es
+toc: false
 page-layout: custom
 css: [home.css, styles/retro.css]
 ---
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>
-// Quarto inyecta padding-top en body via style inline para la navbar.
-// Lo eliminamos inmediatamente antes de que el navegador pinte.
-(function() {
-  function stripBodyPadding() {
-    document.body.style.removeProperty("padding-top");
-    document.body.style.paddingTop = "0px";
-    document.documentElement.style.paddingTop = "0px";
-    document.documentElement.style.marginTop = "0px";
-    document.body.style.marginTop = "0px";
-  }
-  stripBodyPadding();
-  document.addEventListener("DOMContentLoaded", stripBodyPadding);
-  // Por si Quarto lo aplica tarde (scroll restoration)
-  window.addEventListener("load", stripBodyPadding);
-  // Observer por si algún script lo reinyecta
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(m) {
-      if (m.attributeName === "style") { stripBodyPadding(); }
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function() {
-    observer.observe(document.body, { attributes: true });
-  });
-})();
-</script>
-
 ```{=html}
 <section class="home-banner" style="background-image: url('images/banner_huemul.jpg');">
 
+  <div class="banner-vertical-socials" aria-hidden="false">
+    <a class="banner-social-vertical" href="https://www.instagram.com/" aria-label="Instagram">
+      <i class="bi bi-instagram" role="img" aria-hidden="true"></i>
+    </a>
+    <a class="banner-social-vertical" href="https://www.youtube.com/" aria-label="YouTube">
+      <i class="bi bi-youtube" role="img" aria-hidden="true"></i>
+    </a>
+    <a class="banner-social-vertical" href="https://www.tiktok.com/" aria-label="TikTok">
+      <i class="bi bi-tiktok" role="img" aria-hidden="true"></i>
+    </a>
+    <button class="banner-social-vertical banner-search-btn" aria-label="Buscar en la página">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm8.7 17.3-3.9-3.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </button>
+  </div>
 
+  <form class="banner-search-form" role="search" aria-label="Buscar en la página">
+    <input type="search" name="bq" placeholder="Buscar en la página" aria-label="Buscar en la página">
+  </form>
 
   <div class="banner-overlay">
+
+    <div class="banner-topbar">
+      <div class="top-left">
+        <div class="site-brand-mini">
+          <img src="images/logo_huemul.png" alt="logo" class="site-brand-icon">
+          <div class="mini-title">Los Huemules<br><small>Mutual de Artistas, Políticos e Intelectuales</small></div>
+        </div>
+      </div>
+
+      <div class="top-center">
+        <a href="./escritos.html" class="banner-btn">Blog</a>
+        <a href="#somos" class="banner-btn">Somos</a>
+        <a href="#creemos" class="banner-btn">Manifiesto</a>
+      </div>
+
+      <div class="top-right">
+        <!-- intentionally left empty: banner socials and search moved to the vertical column -->
+      </div>
+    </div>
 
     <div class="hero-cross">
 
@@ -54,7 +64,8 @@ css: [home.css, styles/retro.css]
 
       <!-- CENTRO: título -->
       <div class="hero-cross-center">
-        <h1 class="banner-main-title">Los Huemules</h1>
+        <h1 class="hero-title">Los Huemules</h1>
+        <div class="hero-subtitle">Mutual de Artistas, Políticos e Intelectuales</div>
       </div>
 
       <!-- IZQUIERDA: Proyecto -->
@@ -66,36 +77,8 @@ css: [home.css, styles/retro.css]
         <span class="hero-cross-label">Proyecto</span>
       </a>
 
-      <!-- DERECHA: Videos -->
-      <a href="#videos" class="hero-cross-icon hero-cross-right" aria-label="Videos">
-        <div class="hero-cross-icon-img">
-          <img class="icon-default" src="images/icono_videos1.png" alt="">
-          <img class="icon-hover"   src="images/icono_videos2.png" alt="">
-        </div>
-        <span class="hero-cross-label">Videos</span>
-      </a>
+      <!-- ABAJO, DERECHA: reservados -->
 
-      <!-- ABAJO: Contacto -->
-      <a href="#contacto" class="hero-cross-icon hero-cross-bottom" aria-label="Contacto">
-        <div class="hero-cross-icon-img">
-          <img class="icon-default" src="images/logo-contacto1.png" alt="">
-          <img class="icon-hover"   src="images/logo-contacto.png"  alt="">
-        </div>
-        <span class="hero-cross-label">Contacto</span>
-      </a>
-
-    </div>
-
-    <div class="banner-bottom-socials">
-      <a class="banner-social-bottom" href="https://www.instagram.com/" aria-label="Instagram">
-        <i class="bi bi-instagram"></i>
-      </a>
-      <a class="banner-social-bottom" href="https://www.youtube.com/" aria-label="YouTube">
-        <i class="bi bi-youtube"></i>
-      </a>
-      <a class="banner-social-bottom" href="https://www.tiktok.com/" aria-label="TikTok">
-        <i class="bi bi-tiktok"></i>
-      </a>
     </div>
 
   </div>
@@ -605,6 +588,71 @@ document.addEventListener('DOMContentLoaded', function(){
 </figure>
 ```
 
+
+<div id="creemos" style="padding-top: 60px; margin-top: -40px;"></div>
+# ¿En qué creemos?
+<hr style="border-top: 2px solid #000000ff; opacity: 1;">
+
+```{=html}
+<div class="manifiesto-wrapper">
+```
+<div class="manifiesto-columns">
+  <div class="manifiesto-main">
+```{=html}
+<div class="manifiesto-logo">
+  <img src="images/logo_huemul.png" alt="Logo Huemules">
+</div>
+
+<h1 class="manifiesto-title">Manifiesto</h1>
+
+<ol class="manifiesto-text">
+  <li>Reconocemos la oscilación como el orden natural del mundo.</li>
+  <li>Debemos liberarnos de la inercia resultante de un siglo de ingenuidad modernista ideológica y de la falta de sinceridad cínica de su antónimo, hijo bastardo.</li>
+  <li>El movimiento hacia adelante se habilita por medio de una oscilación entre posiciones con ideas diametralmente opuestas, que operan como las polaridades pulsantes de una máquina eléctrica colosal, propulsando el mundo en acción.</li>
+  <li>Somos conscientes de las limitaciones inherentes a todo movimiento y experiencia, y de la futilidad de cualquier intento por trascenderlas. La incompletitud esencial de un sistema no exige sumisión, sino una adhesión orientada a vislumbrar una exterioridad posible. La existencia se enriquece cuando actuamos como si esos límites pudieran ser excedidos.</li>
+  <li>Todas las cosas están atrapadas en una diapositiva irrevocable hacia un estado de entropía máxima disimulada. La creación artística es contingente a la revelación de la diferencia en sí misma. En su cénit, el arte es experiencia inmediata de la diferencia.</li>
+  <li>El presente es un síntoma del nacimiento gemelo de la inmediatez y la obsolescencia. Las nuevas tecnologías permiten la experiencia simultánea de los hechos desde una multiplicidad de posiciones, facilitando la democratización de la historia.</li>
+  <li>Así como la ciencia busca la elegancia poética, el arte puede asumir la búsqueda de la verdad. Toda información es base de conocimiento, empírica o aforística. Debemos abrazar una síntesis científico-poética. El error genera sentido.</li>
+  <li>Se propone un romanticismo pragmático sin anclajes ideológicos. El metamodernismo es la condición mercurial que existe entre, más allá y en la búsqueda de múltiples horizontes fragmentarios. Debemos seguir adelante y oscilar.</li>
+</ol>
+```
+  </div>
+
+  <aside class="manifiesto-playlist" aria-label="Playlist Spotify del manifiesto">
+    <h3 class="manifiesto-playlist-title">Música que expresa nuestras convicciones</h3>
+    <iframe id="manifiesto-spotify" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/598qqYy4f44iiTiGicYuyc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </aside>
+</div>
+```{=html}
+</div>
+```
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mainCol = document.querySelector('.manifiesto-main');
+  const spotify = document.getElementById('manifiesto-spotify');
+  const playlistTitle = document.querySelector('.manifiesto-playlist-title');
+  if (!mainCol || !spotify) return;
+
+  function syncPlaylistHeight() {
+    if (window.innerWidth <= 880) {
+      spotify.style.height = '152px';
+      return;
+    }
+    const titleHeight = playlistTitle ? playlistTitle.offsetHeight : 0;
+    const targetHeight = Math.max(mainCol.offsetHeight - titleHeight - 10, 0);
+    spotify.style.height = targetHeight + 'px';
+  }
+
+  syncPlaylistHeight();
+  setTimeout(syncPlaylistHeight, 250);
+  window.addEventListener('resize', syncPlaylistHeight);
+  window.addEventListener('load', syncPlaylistHeight);
+});
+</script>
+```
+
 ```{=html}
 <section class="inspiraciones-section" aria-label="Nuestras inspiraciones">
   <div class="inspiraciones-layout">
@@ -745,5 +793,3 @@ document.addEventListener('DOMContentLoaded', function () {
 ```{=html}
 </div>
 ```
-
-
