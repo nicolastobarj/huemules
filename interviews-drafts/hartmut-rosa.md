@@ -1,3 +1,10 @@
+---
+title: "Interview with Hartmut Rosa"
+subtitle: "Mutual Los Huemules"
+lang: en
+from: markdown+hard_line_breaks
+css: ["../styles/retro.css"]
+---
 
 # Introduction
 
