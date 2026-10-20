@@ -1,58 +1,45 @@
 ---
 name: draft
-description: Start or develop a blog essay in _borradores/ from vault notes — create the draft note, build an outline from sources and concepts, expand sections, keep the author's voice, and track its estado (idea → esquema → borrador → revisión → listo). Use when the user says "quiero escribir sobre", "nuevo borrador", "start a draft", "arma un esquema", "desarrolla esta sección", or asks for help writing a post for Los Huemules.
+description: Start or develop a written piece (essay, column, blog post) from the vault's notes — define the thesis, gather material, propose an outline and help write sections in the author's voice. Use when the user says "quiero escribir sobre", "nuevo borrador", "arma un esquema", "desarrolla esta sección", "start a draft", or asks for help writing a piece for Los Huemules.
 ---
 
-# Draft an essay
+# Draft a piece
 
-The user and their friends are the authors. Claude organizes material, proposes structure and helps write, but the argument and voice are theirs.
+The user and their friends are the authors. Claude organizes material, proposes structure and helps with the writing, but the argument and the voice are theirs.
 
-## New draft
+## Starting
 
-File: `_borradores/<Título provisional>.md`
+- Ask once, briefly, for the thesis (what the piece argues) and who signs it, unless already stated.
+- Do not create folders. If a folder for drafts exists, use it; otherwise ask where to save (suggest the root).
+- Structure of the note:
 
 ```markdown
 ---
-tipo: borrador
-creado: YYYY-MM-DD
-tags: [borrador]
-estado: idea
 titulo: "<título provisional>"
-subtitulo: ""
-autores: ["<nombre de quien escribe>"]
-fuentes: []
-publicado_en: ""
+autores: ["..."]
+creado: YYYY-MM-DD
 ---
 
-# <Título>
-
 > [!question] Tesis
-> <one sentence: what this essay argues. Ask the user if unclear.>
+> <one sentence>
 
 ## Material
-<links to captures, sources, concepts gathered for this essay>
+<links to vault notes that feed the piece, one line each on how they help>
 
 ## Esquema
 
 ## Texto
 ```
 
-Before writing anything, ask (once, briefly) for the thesis and who signs it, unless already stated.
+## Outline
 
-## Outline (`estado: esquema`)
+1. Search the vault for notes related to the thesis and list them under `## Material`.
+2. Propose 4-7 sections (hook, problem, steps of the argument, counterpoint, closing), with the notes and quotes that support each one.
+3. Point out gaps: claims that no vault note supports yet (suggest `ingest`).
 
-1. Search the vault for notes related to the thesis; list them under `## Material` with one line on how each serves the argument.
-2. Propose an outline of 4-7 sections: hook, problem, argument steps, counterpoint, closing. Under each heading, list which notes/quotes support it.
-3. Point out gaps: claims in the outline that no vault note supports yet (suggest `ingest` for them).
+## Writing
 
-## Writing sections (`estado: borrador`)
-
-- Write in Spanish, essayistic register suited to a public sociology blog: clear, argued, with a personal edge; no academic boilerplate, no bullet lists in the prose.
-- When the user has written any prose, match their tone, sentence length and Chilean idiom rather than imposing a style.
-- Cite with author-year inline (`Rosa (2016)`) and keep the `[[link]]` to the source note in a footnote or in `## Material` so publishing can resolve it.
-- Only quote what is in a vault source note; otherwise mark `[cita por verificar]`.
-- Expand one section at a time when asked; do not rewrite sections the user already wrote unless asked.
-
-## Status
-
-Update `estado` as the draft advances. When the user considers it done, suggest running `challenge` (→ `revisión`) and then `publish` (needs `listo`).
+- Spanish, essayistic register for a public sociology blog: clear, argued, with a personal touch; no academic boilerplate or bullet lists in the prose.
+- If the user has already written, match their tone, rhythm and Chilean idiom.
+- Cite by author and year (`Rosa (2016)`). Quote only what is in a vault note; otherwise mark `[cita por verificar]`.
+- Develop one section at a time when asked. Do not rewrite what the user wrote unless they ask.

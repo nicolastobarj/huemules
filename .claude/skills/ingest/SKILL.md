@@ -1,76 +1,57 @@
 ---
 name: ingest
-description: Turn a source (URL, PDF, book chapter, interview, YouTube/podcast transcript, pasted text) into a structured source note in _fuentes/, and create or update the linked author and concept notes. Use when the user shares a reading, says "fichar", "fichaje", "ingest", "add this source", "resume este texto para la bóveda", or wants literature notes for sociology/theory material.
+description: Turn a source (URL, PDF, book chapter, interview, YouTube/podcast transcript, pasted text) into a faithful reading note in the vault, linked to existing notes on the same authors and concepts. Use when the user shares a reading, says "fichar", "fichaje", "ingest", "resume este texto para la bóveda", or wants reading notes on sociology or theory material.
 ---
 
 # Ingest a source
 
-Goal: one faithful source note plus updated author and concept notes, all interlinked. Accuracy over coverage.
+Goal: one faithful reading note, linked to the rest of the vault. Accuracy over coverage.
 
 ## 1. Get the text
 
-- Web page: use the `defuddle` skill to extract clean Markdown. If that fails, use WebFetch.
-- PDF: use the `pdf` skill or Read with `pages`. For long books, ask which chapters, or process in chunks.
-- Pasted text or transcript: use as-is.
-- If the full text is not accessible (paywall, abstract only), say so and set `acceso: parcial`. Never fill gaps from memory as if they were in the source.
+- Web page: use the `defuddle` skill; if it fails, use WebFetch.
+- PDF: use the `pdf` skill or Read with `pages`. For a long book, ask which chapters.
+- Pasted text or transcript: use it as-is.
+- If you only got part of it (paywall, abstract only), say so in the note. Never fill gaps from memory as if they came from the source.
 
-## 2. Check what already exists
+## 2. Where to save
 
-Search `_fuentes/`, `_autores/`, `_conceptos/` (file names and `aliases`) for the author, the work and its 3-6 central concepts. Reuse existing notes; never create `Aceleracion social.md` when `Aceleración social.md` exists.
+Do not create folders on your own. If an existing folder is clearly for readings or sources, use it; otherwise ask once (suggest the root). Before writing, search the vault for notes that already exist on the same work, author or concepts, and reuse or link to them instead of duplicating.
 
-## 3. Write the source note
+## 3. The note
 
-File: `_fuentes/<Apellido> <Año> - <Título corto>.md`
+Name: `<Apellido> <Año> - <Título corto>.md`. Write in Spanish unless the user writes otherwise; quotes stay in their original language.
 
 ```markdown
 ---
-tipo: fuente
-creado: YYYY-MM-DD
-tags: [fuente, <tema>]
-autor: "[[Apellido Nombre]]"
+autor: "<Nombre Apellido>"
 titulo: "<título completo>"
-año: <año de publicación original>
-formato: <libro | capítulo | artículo | entrevista | video | podcast | web>
+año: <año>
 url: <si aplica>
-acceso: <completo | parcial>
-estado: <por leer | leyendo | fichado>
-conceptos: ["[[Concepto 1]]", "[[Concepto 2]]"]
+creado: YYYY-MM-DD
 ---
 
-# <Título>
-
 > [!abstract] En una frase
-> <the core argument in one sentence>
+> <the core argument>
 
 ## Argumento central
-<3-6 short paragraphs in Spanish paraphrasing the line of argument, in order>
+<short paraphrase, following the source's order>
 
 ## Citas clave
-> "<exact quote, original language>" (p. X)
+> "<exact quote>" (p. X)
 
 ## Conceptos
-- [[Concepto]]: <how this source defines or uses it>
+- <concept>: how the source defines or uses it
 
-## Diálogo con otros autores
-- <explicit references the source makes, linked if the author note exists>
-
-> [!idea] Para Los Huemules
-> <only if the user stated an interpretation, or clearly marked as a suggestion: relevance for Chile, metamodernism, a possible essay>
+> [!idea] Ideas propias
+> <only interpretations the user stated, or suggestions clearly marked as such>
 
 ## Preguntas abiertas
-- ...
 ```
 
-Rules: quotes are verbatim and only from the text you actually read; page numbers only when the source shows them; `[verificar]` for anything uncertain.
+- Link with `[[...]]` only to notes that exist. Do not create author or concept notes unless the user asks.
+- Quotes verbatim, only from the text actually read; page numbers only if the source shows them; `[verificar]` for anything uncertain.
 
-## 4. Author note (`_autores/<Nombre Apellido>.md`)
+## 4. Report
 
-Create if missing (`tipo: autor`, `tradición`, `nacionalidad`, `aliases`); add a line under `## Obras en la bóveda` linking the new source. Biographical facts only if well established; otherwise leave the field empty.
-
-## 5. Concept notes (`_conceptos/<Concepto>.md`)
-
-For each central concept: create if missing (`tipo: concepto`, `aliases`, `autores`). Add a dated bullet under `## Desarrollos` with the source's definition and a link to the source note. Keep concept notes atomic: one concept, what it means, who uses it, how sources differ.
-
-## 6. Report
-
-List created vs. updated files, and flag anything marked `[verificar]` or `acceso: parcial`.
+Say which note was created, which existing notes it links to, and anything marked `[verificar]` or read only in part.

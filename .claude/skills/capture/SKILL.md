@@ -1,34 +1,36 @@
 ---
 name: capture
-description: Quickly capture an idea, quote, observation, link or conversation fragment into the vault inbox (_inbox/) without processing it. Use when the user says "anota", "capture", "save this idea", "jot down", pastes a loose thought or link to keep for later, or asks to save insights from the current conversation.
+description: Quickly capture an idea, quote, observation, link or conversation fragment as a note in the vault without processing it. Use when the user says "anota", "capture", "guarda esta idea", "jot down", pastes a loose thought or link to keep for later, or asks to save insights from the current conversation.
 ---
 
 # Capture
 
-Get the thought into the vault fast. Processing happens later with `connect`.
+Get the thought into the vault fast. Organizing it comes later (`connect`).
 
-## Steps
+## Where to save
 
-1. Pick a short descriptive title (3-7 words, Spanish unless the user writes otherwise). File: `_inbox/<YYYY-MM-DD> <título>.md`.
-2. Write the note:
+The user is building the folder structure themselves. Do not create folders on your own.
+1. Look at the existing folders (excluding the site folders listed in `CLAUDE.md`). If one is clearly meant for captures or loose ideas, use it.
+2. Otherwise ask once where to save captures, and suggest the vault root as the default. Follow that answer for the rest of the session.
+
+## The note
+
+File name: `<YYYY-MM-DD> <título breve>.md` (3-7 words, in the user's language).
 
 ```markdown
 ---
-tipo: captura
 creado: YYYY-MM-DD
-tags: [inbox]
-origen: <conversación | lectura | conversación con X | url>
+origen: <conversación | lectura | url | ...>
 ---
 
-<the idea in the user's own words; keep their phrasing, fix only typos>
+<the idea in the user's own words; fix only typos>
 
-## Posibles vínculos
-- [[...]]  <!-- existing notes this may relate to -->
+Relacionado: [[...]]
 ```
 
-3. For "Posibles vínculos", run a quick search (Grep over `_conceptos/`, `_autores/`, `_fuentes/`, `_borradores/`) for 2-4 key terms and link only notes that actually exist. If none exist, omit the section.
-4. If the capture is a URL, store the URL in `origen` and add one line saying what it is. Do not fetch and summarize it; that is `ingest`.
-5. When capturing from the current conversation, write one capture per distinct idea, not one long dump.
-6. Reply with the file path(s) only, plus a one-line hint if the idea clearly belongs to an existing draft.
+- For `Relacionado`, search the vault for 2-4 key terms and link only notes that actually exist. Omit the line if there are none.
+- If it is a URL, put it in `origen` with one line on what it is. Do not fetch or summarize it; that is `ingest`.
+- From a conversation: one note per distinct idea, not a single dump.
+- Do not rewrite the idea into polished prose.
 
-Do not rewrite the user's idea into polished prose. The inbox keeps raw thinking.
+Reply with the path(s) of the notes created.

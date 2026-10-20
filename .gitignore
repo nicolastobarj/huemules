@@ -10,3 +10,7 @@
 # Obsidian (per-device UI state)
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Quarto previews of notes (not part of the site)
+/site_libs/
+interviews-drafts/**/*.html
