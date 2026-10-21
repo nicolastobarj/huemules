@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "interviews-drafts/hartmut-rosa.md"
+    - "interviews-drafts/hartmut-rosa-es.md"
 
 lang: es
 
@@ -73,4 +74,3 @@ editor: source
 
 execute:
   freeze: auto
-
