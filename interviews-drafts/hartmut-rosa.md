@@ -14,7 +14,7 @@ How are you, Hartmut? Are you ready to be interviewed by a huemul?
 
 ---
 
-I could extend this introduction with a long list of Professor Rosa's achievements, publications and positions, but that would be far too conventional for a puppet like me. So I have prepared a short poem to introduce Hartmut to our audience:
+I could extend this introduction with a long list of Professor Rosa's achievements, publications and positions, but that would be far too conventional for a puppet like me. Chile is the country of the poets, so I prepared a short poem to introduce Hartmut to our audience:
 
 Born in the rural
 A man of these times
@@ -35,13 +35,8 @@ He rebels against ostracism
 With the resonant axes
 As modernity advances
 
-As the world is uncontrollable
-He is not left uncomfortable
 Now he reaches new fields
-With energy as his yields
-
-When I'm looking his books
-Theory brings me some clues
+With the energy as yield
 Questions follow each other
 With these insights discovered
 
@@ -69,7 +64,7 @@ In a more recent book, "Late Modernity in Crisis", you said we need another way 
 
 I think all good theories have to be compatible with human freedom. We social theorists have not found the "truth" or definitive laws of human coexistence; what we can offer is a solid and rigorous interpretation of our times. In the conclusions of "Social Acceleration", you tell the reader that you don't have clear answers for coping with the collapse that speed is carrying us toward. But at the same time, you don't take a pessimistic view. After weighing all the possible alternatives, you encourage new generations of social theorists to look for creative ideas that could unpredictably change the course of events. To illustrate this, you use a phrase from Bourdieu that I find beautiful. I will quote it:
 
-"When it is profound and consistent, sociology is not satisfied with a kind of mere observation that could be demoralizing to work against the inmanent tendencies of the social order. And whoever calls the deterministic should recall that the law of gravity must first be known by those who build the flying machines that effectively overcome it."
+> "When it is profound and consistent, sociology is not satisfied with a kind of mere observation that could be demoralizing to work against the inmanent tendencies of the social order. And whoever calls the deterministic should recall that the law of gravity must first be known by those who build the flying machines that effectively overcome it."
 
 My generation, Gen Z, have seen how climate change and the development of AI are pushing to the limit the contradictions you identified in your early books. But there are so many challenges that sometimes we feel lost on how to change the status quo. It is the duty of sociologists to guide these questions for the general public. In that sense, what actions or missions do you think the younger generation, who are now inheriting a world where acceleration has reached its limit, should take on? What can you see in the new generations which will have to make the transition to adaptive stabilization?
 
